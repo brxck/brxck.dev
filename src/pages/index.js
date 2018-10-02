@@ -1,18 +1,17 @@
 import React from 'react'
+import Layout from '../components/Layout'
+import Project from '../components/Project'
 import { Link, graphql } from 'gatsby'
-
-import Layout from '../components/layout'
 
 const IndexPage = ({ data }) => {
   const projects = data.allProjectsJson.edges
-  console.log(projects)
   return (
     <Layout>
       <h1>Hi people</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
       {projects.map(({ node }) => (
-        <h2 key={node.name}>{node.name}</h2>
+        <Project key={node.id} project={node} />
       ))}
       <Link to="/page-2/">Go to page 2</Link>
     </Layout>
@@ -27,7 +26,7 @@ export const query = graphql`
           name
           repo
           link
-          tech
+          technology
           date
           description
         }

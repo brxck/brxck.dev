@@ -1,5 +1,5 @@
-{
-  "brushstroke": {
+[
+  {
     "name": "Brushstroke",
     "repo": "https://github.com/brxck/brushstroke",
     "link": "http://brushstroke.brockmcelroy.com/",
@@ -9,7 +9,7 @@
       "Brushstroke uses your phone's gyroscope and a WebSockets connection to turn it into a remote paintbrush, allowing you to paint on your desktop or laptop screen."
     ]
   },
-  "castaway": {
+  {
     "name": "Castaway",
     "repo": "https://github.com/brxck/castaway",
     "link": "http://castaway.brockmcelroy.com/",
@@ -20,7 +20,7 @@
       "Features a built-from-scratch JavaScript audio player, progress tracking, and a responsive UI."
     ]
   },
-  "cookie-counter": {
+  {
     "name": "CookieCounter",
     "repo": "https://github.com/brxck/cookie-counter",
     "link": "https://cookie-counter.herokuapp.com/",
@@ -31,7 +31,7 @@
       "Features responsive UI, charts, low-stock alerts, and employee entries by PIN."
     ]
   },
-  "odinbook": {
+  {
     "name": "OdinBook",
     "repo": "https://github.com/brxck/odinbook",
     "link": "http://odinbook.brockmcelroy.com/",
@@ -42,8 +42,7 @@
       "Comes with a preloaded login for you to poke around."
     ]
   },
-  "tasks": {
-    "icon": ":ballot_box_with_check:",
+  {
     "name": "Tasks",
     "repo": "https://github.com/brxck/odin-tasks",
     "link": "https://brockmcelroy.com/odin-tasks/",
@@ -54,4 +53,4 @@
       "Your data is stored between sessions."
     ]
   }
-}
+]

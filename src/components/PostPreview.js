@@ -5,7 +5,7 @@ const PostPreview = ({ post }) => {
   return (
     <article>
       <h3>
-        <Link to="/">{post.frontmatter.title}</Link>
+        <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
       </h3>
       <h4>{post.frontmatter.date}</h4>
       <p>{post.excerpt}</p>

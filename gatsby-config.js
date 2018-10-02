@@ -47,6 +47,7 @@ module.exports = {
               withWebp: true,
             },
           },
+          'gatsby-remark-copy-linked-files',
           'gatsby-remark-prismjs',
         ],
       },

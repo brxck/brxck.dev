@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Brock McElroy',
     siteUrl: 'https://brockmcelroy.com',
   },
   plugins: [

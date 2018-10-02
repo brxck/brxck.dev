@@ -1,6 +1,6 @@
 ---
 title: "Creating a Post Feed with Active Record"
-date: 2018-1-28 
+date: 2018-01-28 
 categories: ruby rails web
 ---
 

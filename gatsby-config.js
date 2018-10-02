@@ -25,15 +25,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'pages',
-        path: '${__dirname}/src/pages',
+        name: 'posts',
+        path: './src/posts',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'pages',
-        path: '${__dirname}/src/data',
+        name: 'projects',
+        path: './src/projects',
       },
     },
     {
@@ -52,7 +52,7 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plug-in-typography',
+      resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'src/utils/typography',
       },

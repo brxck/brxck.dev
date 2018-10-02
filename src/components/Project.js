@@ -4,13 +4,13 @@ const Project = ({ project }) => {
   return (
     <article>
       <h3>
-        <a href={project.link} target="_blank">
+        <a href={project.link} target="_blank" rel="noopener noreferrer">
           {project.name}
         </a>
       </h3>
       <span>{project.date}</span>
       <p>{project.description}</p>
-      <a href={project.repo} target="_blank">
+      <a href={project.repo} target="_blank" rel="noopener noreferrer">
         Code
       </a>
       <ul>

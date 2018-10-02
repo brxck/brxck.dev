@@ -1,0 +1,57 @@
+{
+  "brushstroke": {
+    "name": "Brushstroke",
+    "repo": "https://github.com/brxck/brushstroke",
+    "link": "http://brushstroke.brockmcelroy.com/",
+    "tech": ["Ruby", "Rails", "Action Cable", "WebSockets", "JavaScript"],
+    "date": "2018/9/16",
+    "description": [
+      "Brushstroke uses your phone's gyroscope and a WebSockets connection to turn it into a remote paintbrush, allowing you to paint on your desktop or laptop screen."
+    ]
+  },
+  "castaway": {
+    "name": "Castaway",
+    "repo": "https://github.com/brxck/castaway",
+    "link": "http://castaway.brockmcelroy.com/",
+    "tech": ["Ruby", "Rails", "JavaScript", "Stimulus", "webpacker"],
+    "date": "2018/8/20",
+    "description": [
+      "Discover, subscribe, and listen to podcasts in your browser.",
+      "Features a built-from-scratch JavaScript audio player, progress tracking, and a responsive UI."
+    ]
+  },
+  "cookie-counter": {
+    "name": "CookieCounter",
+    "repo": "https://github.com/brxck/cookie-counter",
+    "link": "https://cookie-counter.herokuapp.com/",
+    "tech": ["Ruby", "Rails", "Bulma", "Slim"],
+    "date": "2018/5/1",
+    "description": [
+      "Inventory, order, and waste tracker for your local restaurant.",
+      "Features responsive UI, charts, low-stock alerts, and employee entries by PIN."
+    ]
+  },
+  "odinbook": {
+    "name": "OdinBook",
+    "repo": "https://github.com/brxck/odinbook",
+    "link": "http://odinbook.brockmcelroy.com/",
+    "tech": ["Ruby", "Rails", "Bulma", "Slim"],
+    "date": "2018/5/1",
+    "description": [
+      "Social networking for non-humans. Bless your favorite comments, and smite the worst posts.",
+      "Comes with a preloaded login for you to poke around."
+    ]
+  },
+  "tasks": {
+    "icon": ":ballot_box_with_check:",
+    "name": "Tasks",
+    "repo": "https://github.com/brxck/odin-tasks",
+    "link": "https://brockmcelroy.com/odin-tasks/",
+    "tech": ["JavaScript", "webpack", "Bulma", "Pug"],
+    "date": "2018/3/1",
+    "description": [
+      "Organize your todos into boards and projects with due dates, priorities, and descriptions.",
+      "Your data is stored between sessions."
+    ]
+  }
+}

@@ -9,17 +9,29 @@ const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
   return (
     <Layout>
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      {projects.map(({ node }) => (
-        <Project key={node.id} project={node} />
-      ))}
-      <h1>Posts</h1>
-      {posts.map(({ node }) => (
-        <PostPreview key={node.id} post={node} />
-      ))}
-      <Link to="/page-2/">Go to page 2</Link>
+      <header>
+        <p>Hi, I'm Brock.</p>
+        <p>
+          I am a web developer from Tucson, Arizona. I believe in sustainability
+          in all things — I aim to write code that is performant,
+          understandable, and robust.
+        </p>
+        <p>
+          These are some of the things I've been working on recently. I keep
+          more code and contributions over at my{' '}
+          <a href="https://github.com/brxck">Github.</a>
+        </p>
+      </header>
+      <main>
+        <h2>Work</h2>
+        {projects.map(({ node }) => (
+          <Project key={node.id} project={node} />
+        ))}
+        <h2>Posts</h2>
+        {posts.map(({ node }) => (
+          <PostPreview key={node.id} post={node} />
+        ))}
+      </main>
     </Layout>
   )
 }

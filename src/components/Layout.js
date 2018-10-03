@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from './Header'
 import { StaticQuery, graphql } from 'gatsby'
+import 'normalize.css'
+import '../styles/typography.scss'
+import style from '../styles/Layout.module.scss'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -27,7 +30,7 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div style={{ margin: '0 auto', maxWidth: '800px' }}>{children}</div>
+        <div className={style.content}>{children}</div>
       </>
     )}
   />

@@ -2,12 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const Header = ({ siteTitle }) => (
-  <div>
-    <div>
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-    </div>
+  <div style={{ textAlign: 'center' }}>
+    <h1 style={{ marginTop: '1rem' }}>
+      <Link to="/">{siteTitle}</Link>
+    </h1>
   </div>
 )
 

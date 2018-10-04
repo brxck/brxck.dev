@@ -8,7 +8,9 @@ class ScrollingCards extends Component {
   }
 
   componentDidMount() {
-    this.scrolling.current.scrollLeft = '100'
+    const fadeWidth = this.scrolling.current.clientWidth * 0.05
+    const paddingWidth = this.scrolling.current.firstChild.clientWidth
+    this.scrolling.current.scrollLeft = paddingWidth - fadeWidth
   }
 
   render() {

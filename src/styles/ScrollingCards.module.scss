@@ -5,13 +5,12 @@
 }
 
 .scrolling {
-  transition: all 0.5s;
   display: flex;
   flex-wrap: nowrap;
   margin-top: 0.5rem;
-  position: relative;
-  cursor: grab;
   overflow: auto;
+  position: relative;
+  transition: all 0.5s;
 
   @media (min-width: $tablet) {
     mask-image: linear-gradient(
@@ -29,21 +28,46 @@
       transparent
     );
   }
-
-  &:active {
-    cursor: grabbing;
-  }
-
-  @media (min-width: $tablet) {
-    // overflow: hidden;
-  }
 }
 
 .padding {
   display: block;
-  padding: 1px 50px;
+  padding: 1px 200px;
+}
 
-  @media (min-width: $tablet) {
-    padding: 1px 100px;
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  width: 25px;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+
+  button {
+    display: none;
+    background-color: $white-ter;
+    border: none;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.left {
+  left: -50px;
+  ::after {
+    content: '<';
+  }
+}
+
+.right {
+  right: -50px;
+  ::after {
+    content: '>';
   }
 }

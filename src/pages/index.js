@@ -2,14 +2,17 @@ import React from 'react'
 import Layout from '../components/Layout'
 import PostPreview from '../components/PostPreview'
 import Project from '../components/Project'
+import ScrollingCards from '../components/ScrollingCards'
 import { Link, graphql } from 'gatsby'
+
+import style from '../styles/indexStyle.module.scss'
 
 const IndexPage = ({ data }) => {
   const projects = data.allProjectsJson.edges
   const posts = data.allMarkdownRemark.edges
   return (
     <Layout>
-      <header>
+      <header className={style.text}>
         <p>Hi, I'm Brock.</p>
         <p>
           I am a web developer from Tucson, Arizona. I believe in sustainability
@@ -23,14 +26,18 @@ const IndexPage = ({ data }) => {
         </p>
       </header>
       <main>
-        <h2>Work</h2>
-        {projects.map(({ node }) => (
-          <Project key={node.id} project={node} />
-        ))}
-        <h2>Posts</h2>
-        {posts.map(({ node }) => (
-          <PostPreview key={node.id} post={node} />
-        ))}
+        <h2 className={style.section}>Work</h2>
+        <ScrollingCards>
+          {projects.map(({ node }) => (
+            <Project key={node.id} project={node} />
+          ))}
+        </ScrollingCards>
+        <h2 className={style.section}>Posts</h2>
+        <ScrollingCards>
+          {posts.map(({ node }) => (
+            <PostPreview key={node.id} post={node} />
+          ))}
+        </ScrollingCards>
       </main>
     </Layout>
   )

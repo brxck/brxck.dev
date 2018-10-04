@@ -8,15 +8,28 @@
   flex-grow: 1;
   flex-shrink: 0;
   margin: 1rem 0.5rem;
-  max-width: 375px;
+  max-width: 400px;
+
+  @media (max-width: $tablet) {
+    max-width: 95vw;
+  }
+}
+
+.header,
+.body {
+  padding: 0.2rem 1rem;
+}
+
+.header {
+  margin-top: 1rem;
 
   h3 {
     font-size: 1.5rem;
-    margin: 1rem 0;
+    margin: 0;
+  }
 
-    a {
-      text-decoration: none;
-    }
+  a {
+    text-decoration: none;
   }
 }
 
@@ -24,20 +37,20 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding: 10px 25px;
+  margin-bottom: 1rem;
 
   p {
     margin: 0;
   }
+}
 
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 0;
-    margin-top: 1rem;
-    padding: 0;
-  }
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-top: 1rem;
+  padding: 0;
 
   li {
     background-color: $white-ter;

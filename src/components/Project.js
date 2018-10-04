@@ -4,18 +4,20 @@ import style from '../styles/card.module.scss'
 const Project = ({ project }) => {
   return (
     <article className={style.card}>
-      <div className={style.body}>
-        <h3 className={style.title}>
+      <div className={style.header}>
+        <h3>
           <a href={project.link} target="_blank" rel="noopener noreferrer">
             {project.name}
           </a>
         </h3>
+      </div>
+      <div className={style.body}>
         <div className={style.description}>
           {project.description.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
         </div>
-        <ul>
+        <ul className={style.tags}>
           {project.technology.map((tech, index) => (
             <li key={index}>{tech}</li>
           ))}

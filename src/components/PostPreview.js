@@ -5,10 +5,12 @@ import style from '../styles/card.module.scss'
 const PostPreview = ({ post }) => {
   return (
     <article className={style.card}>
-      <div className={style.body}>
+      <div className={style.header}>
         <h3>
           <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
         </h3>
+      </div>
+      <div className={style.body}>
         <div className={style.description}>
           <p>{post.excerpt}</p>
         </div>

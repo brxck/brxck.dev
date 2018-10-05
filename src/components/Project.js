@@ -4,7 +4,7 @@ import style from '../styles/card.module.scss'
 
 class Project extends Component {
   cardImage(image) {
-    if (image) return <Img fixed={image.node.childImageSharp.fixed} />
+    if (image) return <Img fluid={image.node.childImageSharp.fluid} />
   }
 
   render() {

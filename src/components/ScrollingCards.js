@@ -13,7 +13,7 @@ class ScrollingCards extends Component {
     const scrollingElement = this.scrolling.current
 
     // Hide scrollbar and show buttons if javascript enabled
-    scrollingElement.style.overflow = 'hidden'
+    // scrollingElement.style.overflow = 'hidden'
     this.left.current.style.display = 'block'
     this.right.current.style.display = 'block'
 

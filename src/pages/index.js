@@ -8,7 +8,9 @@ import { Link, graphql } from 'gatsby'
 import style from '../styles/indexStyle.module.scss'
 
 const IndexPage = ({ data }) => {
+  console.log(data)
   const projects = data.allProjectsJson.edges
+  const projectImages = data.allFile.edges
   const posts = data.allMarkdownRemark.edges
   return (
     <Layout>
@@ -29,7 +31,7 @@ const IndexPage = ({ data }) => {
         <h2 className={style.section}>Work</h2>
         <ScrollingCards>
           {projects.map(({ node }) => (
-            <Project key={node.id} project={node} />
+            <Project key={node.id} project={node} images={projectImages} />
           ))}
         </ScrollingCards>
         <h2 className={style.section}>Posts</h2>
@@ -70,6 +72,21 @@ export const query = graphql`
             slug
           }
           excerpt
+        }
+      }
+    }
+
+    allFile(filter: { relativePath: { regex: "/^projects.*.png/" } }) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            # Specify the image processing specifications right in the query.
+            # Makes it trivial to update as your page's design changes.
+            fixed(width: 400) {
+              ...GatsbyImageSharpFixed
+            }
+          }
         }
       }
     }

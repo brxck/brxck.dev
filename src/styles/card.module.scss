@@ -1,6 +1,7 @@
 @import 'variables';
 
 .card {
+  background-color: $white;
   border-radius: 5px;
   box-shadow: 0 2px 7px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1);
   display: flex;

@@ -15,6 +15,15 @@
   }
 }
 
+.image {
+  border-bottom: 1px solid $gray-lighter;
+
+  img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+}
+
 .header,
 .body {
   padding: 0.2rem 1rem;

@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Header from './Header'
+import Navbar from './Navbar'
 import { StaticQuery, graphql } from 'gatsby'
 import 'normalize.css'
+import '../styles/global.scss'
 import '../styles/typography.scss'
 import style from '../styles/Layout.module.scss'
 
@@ -29,8 +30,9 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Navbar siteTitle={data.site.siteMetadata.title} />
         <div className={style.content}>{children}</div>
+        <div className={style.cardLayout} />
       </>
     )}
   />

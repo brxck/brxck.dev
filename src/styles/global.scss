@@ -1,0 +1,16 @@
+html,
+body,
+main,
+#___gatsby,
+#___gatsby > div {
+  min-height: 100%;
+}
+
+#___gatsby > div {
+  position: relative;
+  padding: 4rem 0;
+}
+
+html {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}

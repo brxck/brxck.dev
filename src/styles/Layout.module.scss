@@ -1,4 +1,21 @@
+@import 'variables';
+
 .content {
   margin: 1rem auto;
   max-width: 1400px;
+}
+
+.cardLayout {
+  background-color: $white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 750px;
+  margin: 3rem auto;
+  border-radius: 10px;
+  z-index: -1;
+
+  box-shadow: 0 2px 7px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1);
 }

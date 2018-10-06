@@ -19,7 +19,13 @@ class componentName extends Component {
 
         <div className={style.field}>
           <label htmlFor="message">Message</label>
-          <textarea name="message" id="message" cols="50" rows="7" placeholder="What's up?" />
+          <textarea
+            name="message"
+            id="message"
+            cols="50"
+            rows="7"
+            placeholder="What's up?"
+          />
         </div>
         <button type="submit" className={style.submit}>
           Send

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Img from 'gatsby-image'
+import Icon from '@mdi/react'
+import { mdiGithubCircle } from '@mdi/js'
 import style from '../styles/card.module.scss'
 
 class Project extends Component {
@@ -23,6 +25,9 @@ class Project extends Component {
               {project.name}
             </a>
           </h3>
+          <a href={project.repo} target="_blank" rel="noopener noreferrer">
+            <Icon path={mdiGithubCircle} size={1} color="hsl(0, 0%, 29%)" />
+          </a>
         </div>
         <div className={style.body}>
           <div className={style.description}>
@@ -31,15 +36,12 @@ class Project extends Component {
             ))}
             <p>{data}</p>
           </div>
-          <ul className={style.tags}>
-            {project.technology.map((tech, index) => (
-              <li key={`${project.id}-tech-${index}`}>{tech}</li>
-            ))}
-          </ul>
           <div className={style.footer}>
-            <a href={project.repo} target="_blank" rel="noopener noreferrer">
-              Code
-            </a>
+            <ul className={style.tags}>
+              {project.technology.map((tech, index) => (
+                <li key={`${project.id}-tech-${index}`}>{tech}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </article>

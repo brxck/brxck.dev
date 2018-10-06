@@ -12,7 +12,7 @@ const Navigation = () => (
         <AnchorLink target="posts">posts</AnchorLink>
       </li>
       <li>
-        <AnchorLink target="contact">contact</AnchorLink>
+        <AnchorLink target="mail">mail</AnchorLink>
       </li>
     </ul>
   </nav>

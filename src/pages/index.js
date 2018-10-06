@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import PostPreview from '../components/PostPreview'
 import Project from '../components/Project'
 import ScrollingCards from '../components/ScrollingCards'
+import Contact from '../components/Contact'
 import { Link, graphql } from 'gatsby'
 
 import style from '../styles/indexStyle.module.scss'
@@ -20,29 +21,42 @@ const IndexPage = ({ data }) => {
           in all things — I aim to write code that is performant,
           understandable, and robust.
         </p>
-        <p>
-          These are some of the things I've been working on recently. I keep
-          more code and contributions over at my{' '}
-          <a href="https://github.com/brxck">Github.</a>
-        </p>
       </header>
       <main>
-        <h2 id="work" className={style.section}>
-          Work
-        </h2>
+        <h1 id="work" className={style.section}>
+          work
+        </h1>
+        <div className={style.text}>
+          <p>
+            Lately I've been enjoying working with modern JavaScript front-ends
+            backed by Ruby on Rails APIs. This site was made from scratch using
+            Gatsby and React.
+          </p>
+          <p>
+            These are some of the things I've been working on recently. I keep
+            more code and contributions over at my{' '}
+            <a href="https://github.com/brxck">Github.</a>
+          </p>
+        </div>
         <ScrollingCards>
           {projects.map(({ node }) => (
             <Project key={node.id} project={node} images={projectImages} />
           ))}
         </ScrollingCards>
-        <h2 id="posts" className={style.section}>
-          Posts
-        </h2>
+        <h1 id="posts" className={style.section}>
+          posts
+        </h1>
         <ScrollingCards>
           {posts.map(({ node }) => (
             <PostPreview key={node.id} post={node} />
           ))}
         </ScrollingCards>
+        <div className={style.text}>
+          <h1 id="mail" className={style.section}>
+            mail
+          </h1>
+          <Contact />
+        </div>
       </main>
     </Layout>
   )

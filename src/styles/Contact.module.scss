@@ -1,0 +1,39 @@
+@import 'variables';
+
+.field {
+  label {
+    color: $gray;
+    display: block;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  input {
+    width: 45%;
+  }
+
+  textarea {
+    width: 96%;
+  }
+
+  input,
+  textarea {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 7px rgba($black, 0.1);
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+.submit {
+  background-color: $blue;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 7px rgba($black, 0.1);
+  color: $white-ter;
+  font-weight: 600;
+  height: 2.5rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}

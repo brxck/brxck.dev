@@ -10,11 +10,14 @@
   }
 
   input {
-    width: 45%;
+    box-sizing: border-box;
+    min-width: 200px;
+    width: 50%;
   }
 
   textarea {
-    width: 96%;
+    box-sizing: border-box;
+    width: 100%;
   }
 
   input,

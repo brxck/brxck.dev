@@ -8,7 +8,6 @@ import { Link, graphql } from 'gatsby'
 import style from '../styles/indexStyle.module.scss'
 
 const IndexPage = ({ data }) => {
-  console.log(data)
   const projects = data.allProjectsJson.edges
   const projectImages = data.allFile.edges
   const posts = data.allMarkdownRemark.edges

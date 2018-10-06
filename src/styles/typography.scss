@@ -1,3 +1,5 @@
+@import 'variables';
+
 // https://codepen.io/chriscoyier/pen/pPRGLP/
 
 @function strip-unit($value) {
@@ -37,6 +39,7 @@ html {
 }
 
 body {
+  color: $black-ter;
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI',
     Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';

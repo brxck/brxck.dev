@@ -27,13 +27,17 @@ const IndexPage = ({ data }) => {
         </p>
       </header>
       <main>
-        <h2 className={style.section}>Work</h2>
+        <h2 id="work" className={style.section}>
+          Work
+        </h2>
         <ScrollingCards>
           {projects.map(({ node }) => (
             <Project key={node.id} project={node} images={projectImages} />
           ))}
         </ScrollingCards>
-        <h2 className={style.section}>Posts</h2>
+        <h2 id="posts" className={style.section}>
+          Posts
+        </h2>
         <ScrollingCards>
           {posts.map(({ node }) => (
             <PostPreview key={node.id} post={node} />

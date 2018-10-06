@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Navbar from './Navbar'
+import Navigation from './Navigation'
 import { StaticQuery, graphql } from 'gatsby'
 import 'normalize.css'
 import '../styles/global.scss'
@@ -30,7 +30,7 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Navbar siteTitle={data.site.siteMetadata.title} />
+        <Navigation />
         <div className={style.content}>{children}</div>
         <div className={style.cardLayout} />
       </>

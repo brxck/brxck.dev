@@ -1,18 +1,19 @@
 @import 'variables';
 
 .field {
+  flex-grow: 1;
+
   label {
     color: $gray;
     display: block;
     font-weight: 500;
-    margin-top: 1rem;
-    margin-bottom: 0.25rem;
+    margin: 1rem 0 0.25rem 0.1rem;
   }
 
   input {
     box-sizing: border-box;
     min-width: 200px;
-    width: 50%;
+    width: 90%;
   }
 
   textarea {
@@ -29,6 +30,11 @@
   }
 }
 
+.group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .submit {
   background-color: $blue;
   border: none;
@@ -36,6 +42,7 @@
   box-shadow: 0 2px 7px rgba($black, 0.2);
   color: $white-ter;
   cursor: pointer;
+  font-size: 1.1rem;
   font-weight: 600;
   height: 2.5rem;
   margin-top: 1.5rem;
@@ -45,5 +52,9 @@
   &:disabled {
     box-shadow: none;
     color: darken($white-ter, 10%);
+  }
+
+  span {
+    margin-right: 0.5rem;
   }
 }

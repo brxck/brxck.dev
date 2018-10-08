@@ -6,7 +6,7 @@ import ScrollingCards from '../components/ScrollingCards'
 import Contact from '../components/Contact'
 import { Link, graphql } from 'gatsby'
 
-import style from '../styles/indexStyle.module.scss'
+import style from '../styles/page.module.scss'
 
 const IndexPage = ({ data }) => {
   const projects = data.allProjectsJson.edges

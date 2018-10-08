@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => {
           <p>
             Lately I've been enjoying working with modern JavaScript front-ends
             backed by Ruby on Rails APIs. This site was made from scratch using
-            Gatsby and React.
+            Gatsby, React, and GraphQL.
           </p>
           <p>
             These are some of the things I've been working on recently. I keep

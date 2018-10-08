@@ -1,18 +1,18 @@
 import React from 'react'
-import AnchorLink from './AnchorLink'
+import SmoothLink from './SmoothLink'
 import style from '../styles/Navigation.module.scss'
 
 const Navigation = () => (
   <nav className={style.navigation}>
     <ul>
       <li>
-        <AnchorLink target="work">work</AnchorLink>
+        <SmoothLink to="#work">work</SmoothLink>
       </li>
       <li>
-        <AnchorLink target="posts">posts</AnchorLink>
+        <SmoothLink to="#posts">posts</SmoothLink>
       </li>
       <li>
-        <AnchorLink target="mail">mail</AnchorLink>
+        <SmoothLink to="#mail">mail</SmoothLink>
       </li>
     </ul>
   </nav>

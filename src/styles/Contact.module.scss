@@ -49,11 +49,6 @@
   margin-bottom: 1rem;
   width: 100%;
 
-  &:disabled {
-    box-shadow: none;
-    color: darken($white-ter, 10%);
-  }
-
   span {
     margin-right: 0.5rem;
   }

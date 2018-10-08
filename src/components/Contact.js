@@ -7,6 +7,7 @@ class componentName extends Component {
   render() {
     return (
       <form action="https://jumprock.co/mail/brxckcontact" method="post">
+        <input type="hidden" name="after" value="https://brockmcelroy.com" />
         <input type="text" name="trapit" style={{ display: 'none' }} />
 
         <div className={style.group}>

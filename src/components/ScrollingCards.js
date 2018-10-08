@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Icon from '@mdi/react'
+import { mdiChevronRight, mdiChevronLeft } from '@mdi/js'
 import style from '../styles/ScrollingCards.module.scss'
 
 class ScrollingCards extends Component {
@@ -49,10 +51,14 @@ class ScrollingCards extends Component {
     return (
       <div className={style.container}>
         <div className={style.left}>
-          <button ref={this.left} onClick={() => this.scroll(-400)} />
+          <button ref={this.left} onClick={() => this.scroll(-400)}>
+            <Icon path={mdiChevronLeft} color="currentColor" />
+          </button>
         </div>
         <div className={style.right}>
-          <button ref={this.right} onClick={() => this.scroll(400)} />
+          <button ref={this.right} onClick={() => this.scroll(400)}>
+            <Icon path={mdiChevronRight} color="currentColor" />
+          </button>
         </div>
 
         <div ref={this.scrolling} className={style.scrolling}>

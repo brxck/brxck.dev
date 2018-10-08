@@ -44,23 +44,23 @@
     background-color: transparent;
     border: none;
     color: $white-ter;
+    cursor: pointer;
     display: none;
     font-weight: 800;
     height: 50px;
+    transition: transform 500ms;
     width: 50px;
+  }
+
+  button:hover svg {
+    transform: scale(1.25);
   }
 }
 
 .left {
-  left: -45px;
-  ::after {
-    content: '<';
-  }
+  left: -60px;
 }
 
 .right {
-  right: -45px;
-  ::after {
-    content: '>';
-  }
+  right: -60px;
 }

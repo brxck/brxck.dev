@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Icon from '@mdi/react'
+import anime from 'animejs'
 import { mdiChevronRight, mdiChevronLeft } from '@mdi/js'
 import style from '../styles/ScrollingCards.module.scss'
 
@@ -28,23 +29,13 @@ class ScrollingCards extends Component {
   }
 
   scroll(amount) {
-    const current = this.scrolling.current.scrollLeft
-    const target = current + amount
-    if (amount > 0) {
-      const scrollInterval = setInterval(() => {
-        if (this.scrolling.current.scrollLeft >= target) {
-          clearInterval(scrollInterval)
-        }
-        this.scrolling.current.scrollLeft += 25
-      }, 1000 / 60)
-    } else if (amount < 0) {
-      const scrollInterval = setInterval(() => {
-        if (this.scrolling.current.scrollLeft <= target) {
-          clearInterval(scrollInterval)
-        }
-        this.scrolling.current.scrollLeft -= 25
-      }, 1000 / 60)
-    }
+    const scrolling = this.scrolling.current
+    const current = scrolling.scrollLeft
+    const max = scrolling.scrollWidth - scrolling.clientWidth
+    anime({
+      targets: scrolling,
+      scrollLeft: Math.min(current + amount, max),
+    })
   }
 
   render() {

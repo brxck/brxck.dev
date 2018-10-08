@@ -47,7 +47,13 @@
   height: 2.5rem;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
+  transition: all 300ms;
   width: 100%;
+
+  &:hover {
+    background-color: lighten($blue, 2%);
+    box-shadow: 0 2px 7px rgba($black, 0.4);
+  }
 
   span {
     margin-right: 0.5rem;

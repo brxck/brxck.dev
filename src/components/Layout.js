@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Navigation from './Navigation'
+import Social from './Social'
 import { StaticQuery, graphql } from 'gatsby'
 import 'normalize.css'
 import '../styles/global.scss'
@@ -33,6 +34,7 @@ const Layout = ({ children }) => (
         <Navigation />
         <div className={style.content}>{children}</div>
         <div className={style.cardLayout} />
+        <Social />
       </>
     )}
   />

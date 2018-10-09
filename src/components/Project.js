@@ -31,14 +31,14 @@ class Project extends Component {
         <div className={style.body}>
           <div className={style.description}>
             {project.description.map((paragraph, index) => (
-              <p key={`${project.id}-desc-${index}`}>{paragraph}</p>
+              <p key={index}>{paragraph}</p>
             ))}
             <p>{data}</p>
           </div>
           <div className={style.footer}>
             <ul className={style.tags}>
               {project.technology.map((tech, index) => (
-                <li key={`${project.id}-tech-${index}`}>{tech}</li>
+                <li key={index}>{tech}</li>
               ))}
             </ul>
           </div>

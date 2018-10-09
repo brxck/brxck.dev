@@ -4,7 +4,7 @@ import PostPreview from '../components/PostPreview'
 import Project from '../components/Project'
 import ScrollingCards from '../components/ScrollingCards'
 import Contact from '../components/Contact'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import style from '../styles/page.module.scss'
 
@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => {
       <header className={style.text}>
         <p>Hi, I'm Brock.</p>
         <p>
-          I am a web developer from Tucson, Arizona. I believe in sustainability
+          I'm a web developer from Tucson, Arizona. I believe in sustainability
           in all things — I aim to write code that is performant,
           understandable, and robust.
         </p>
@@ -29,8 +29,10 @@ const IndexPage = ({ data }) => {
         <div className={style.text}>
           <p>
             Lately I've been enjoying working with modern JavaScript front-ends
-            backed by Ruby on Rails APIs. This site was made from scratch using
-            Gatsby, React, and GraphQL.
+            backed by Ruby on Rails APIs.
+          </p>
+          <p>
+            This site was made from scratch using Gatsby, React, and GraphQL.
           </p>
           <p>
             These are some of the things I've been working on recently. I keep

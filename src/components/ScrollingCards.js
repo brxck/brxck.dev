@@ -14,17 +14,17 @@ class ScrollingCards extends Component {
 
   componentDidMount() {
     // Set and animate initial scroll position
-    const scrollingElement = this.scrolling.current
-    const fadeWidth = scrollingElement.clientWidth * 0.05
-    const paddingWidth = scrollingElement.firstChild.clientWidth
+    const scrolling = this.scrolling.current
+    const fadeWidth = scrolling.clientWidth * 0.05
+    const paddingWidth = scrolling.firstChild.clientWidth
     anime({
-      targets: this.scrolling.current,
+      targets: scrolling,
       scrollLeft: paddingWidth - fadeWidth,
     })
 
     // Hide scrollbar and show buttons if javascript enabled
     if (window.innerWidth > 769) {
-      scrollingElement.style.overflow = 'hidden'
+      scrolling.style.overflow = 'hidden'
       this.left.current.style.display = 'block'
       this.right.current.style.display = 'block'
     }
@@ -33,13 +33,14 @@ class ScrollingCards extends Component {
   scroll(amount) {
     const scrolling = this.scrolling.current
     const current = scrolling.scrollLeft
+    const offset = scrolling.firstChild.clientWidth / 4
     anime({
       targets: scrolling,
       scrollLeft: Math.max(
-        200,
+        offset,
         Math.min(
           current + amount,
-          scrolling.scrollWidth - scrolling.clientWidth - 200
+          scrolling.scrollWidth - scrolling.clientWidth - offset
         )
       ),
     })

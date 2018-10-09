@@ -14,7 +14,6 @@ class Project extends Component {
     const image = images.find(
       ({ node: { name } }) => name === project.name.toLowerCase()
     )
-    console.log(image)
 
     return (
       <article className={style.card}>

@@ -4,13 +4,14 @@ module.exports = {
     siteUrl: 'https://brockmcelroy.com',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-netlify',
     'gatsby-plugin-offline',
-    'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
+    'gatsby-transformer-sharp',
     'gatsby-transformer-json',
-    'gatsby-plugin-sass',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

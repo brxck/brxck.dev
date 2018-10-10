@@ -35,7 +35,8 @@
   flex-wrap: wrap;
 }
 
-.submit {
+.submit,
+.sent {
   background-color: $blue;
   border: none;
   border-radius: 5px;
@@ -50,12 +51,22 @@
   transition: all 300ms;
   width: 100%;
 
+  span {
+    margin-right: 0.5rem;
+    &:after {
+      content: 'send';
+    }
+  }
+
   &:hover {
     background-color: lighten($blue, 2%);
     box-shadow: 0 2px 7px rgba($black, 0.4);
   }
 
-  span {
-    margin-right: 0.5rem;
+  &:disabled {
+    background-color: $green;
+    span:after {
+      content: 'sent!';
+    }
   }
 }

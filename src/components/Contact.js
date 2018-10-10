@@ -3,13 +3,51 @@ import Icon from '@mdi/react'
 import { mdiSend } from '@mdi/js'
 import style from '../styles/Contact.module.scss'
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
+
 export default class Contact extends Component {
+  state = { sent: false }
+
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value })
+  }
+
+  handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...this.state,
+      }),
+    })
+      .then(() => this.setState({ sent: true }))
+      .catch(error => alert(error))
+  }
+
   render() {
     return (
-      <form action="https://jumprock.co/mail/brxckcontact" method="post">
-        <input type="hidden" name="after" value="https://brockmcelroy.com" />
-        <input type="text" name="trapit" style={{ display: 'none' }} />
-
+      <form
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={this.handleSubmit}
+      >
+        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+        <input type="hidden" name="form-name" value="contact" />{' '}
+        <div hidden>
+          <label>
+            Don’t fill this out:{' '}
+            <input name="bot-field" onChange={this.handleChange} />
+          </label>
+        </div>
         <div className={style.group}>
           <div className={style.field}>
             <label htmlFor="email">Your Email</label>
@@ -18,10 +56,10 @@ export default class Contact extends Component {
               id="email"
               name="email"
               placeholder="email@example.io"
+              onChange={this.handleChange}
               required
             />
           </div>
-
           <div className={style.field}>
             <label htmlFor="subject">Subject</label>
             <input
@@ -29,11 +67,11 @@ export default class Contact extends Component {
               id="subject"
               name="subject"
               placeholder="Re: Nigerian Prince"
+              onChange={this.handleChange}
               required
             />
           </div>
         </div>
-
         <div className={style.field}>
           <label htmlFor="message">Message</label>
           <textarea
@@ -42,17 +80,22 @@ export default class Contact extends Component {
             cols="50"
             rows="7"
             placeholder="What's up?"
+            onChange={this.handleChange}
             required
           />
         </div>
-        <button type="submit" className={style.submit}>
+        <button
+          type="submit"
+          className={style.submit}
+          disabled={!!this.state.sent}
+        >
           <Icon
             path={mdiSend}
             size={0.75}
             color={'currentColor'}
             rotate={-20}
           />
-          <span>send</span>
+          <span />
         </button>
       </form>
     )

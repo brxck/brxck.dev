@@ -20,13 +20,15 @@ export default class Contact extends Component {
   handleSubmit = e => {
     e.preventDefault()
     const form = e.target
+    const body = encode({
+      'form-name': form.getAttribute('name'),
+      ...this.state,
+    })
+    console.log(body)
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...this.state,
-      }),
+      body: body,
     })
       .then(() => {
         this.setState({ sent: true, ...this.initialFormState })
@@ -39,6 +41,7 @@ export default class Contact extends Component {
       <form
         name="contact"
         method="post"
+        action="/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={this.handleSubmit}

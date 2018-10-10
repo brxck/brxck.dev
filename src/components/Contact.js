@@ -10,7 +10,8 @@ function encode(data) {
 }
 
 export default class Contact extends Component {
-  state = { sent: false }
+  initialFormState = { email: '', subject: '', message: '' }
+  state = { sent: false, ...this.initialFormState }
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value })
@@ -27,11 +28,13 @@ export default class Contact extends Component {
         ...this.state,
       }),
     })
-      .then(() => this.setState({ sent: true }))
+      .then(() => {
+        this.setState({ sent: true, ...this.initialFormState })
+      })
       .catch(error => alert(error))
   }
 
-  render() {
+  render(state) {
     return (
       <form
         name="contact"
@@ -57,6 +60,7 @@ export default class Contact extends Component {
               name="email"
               placeholder="email@example.io"
               onChange={this.handleChange}
+              value={this.state.email}
               required
             />
           </div>
@@ -68,6 +72,7 @@ export default class Contact extends Component {
               name="subject"
               placeholder="Re: Nigerian Prince"
               onChange={this.handleChange}
+              value={this.state.subject}
               required
             />
           </div>
@@ -81,6 +86,7 @@ export default class Contact extends Component {
             rows="7"
             placeholder="What's up?"
             onChange={this.handleChange}
+            value={this.state.message}
             required
           />
         </div>

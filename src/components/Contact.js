@@ -28,7 +28,7 @@ export default class Contact extends Component {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: body,
+      body: body + '?no-cache=1', // Prevent service worker interception
     })
       .then(() => {
         this.setState({ sent: true, ...this.initialFormState })

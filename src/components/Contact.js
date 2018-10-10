@@ -3,7 +3,7 @@ import Icon from '@mdi/react'
 import { mdiSend } from '@mdi/js'
 import style from '../styles/Contact.module.scss'
 
-class componentName extends Component {
+export default class Contact extends Component {
   render() {
     return (
       <form action="https://jumprock.co/mail/brxckcontact" method="post">
@@ -45,10 +45,7 @@ class componentName extends Component {
             required
           />
         </div>
-        <button
-          type="submit"
-          className={style.submit}
-        >
+        <button type="submit" className={style.submit}>
           <Icon
             path={mdiSend}
             size={0.75}
@@ -61,5 +58,3 @@ class componentName extends Component {
     )
   }
 }
-
-export default componentName

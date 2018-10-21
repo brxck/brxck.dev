@@ -6,14 +6,12 @@ import style from '../styles/page.module.scss'
 
 const NotFoundPage = ({ data }) => (
   <Layout>
-    <Link to="/">
-      <Img
-        fluid={data.file.childImageSharp.fluid}
-        alt="hero"
-        className={style.hero}
-        critical
-      />
-    </Link>
+    <Img
+      fluid={data.file.childImageSharp.fluid}
+      alt="hero"
+      className={style.hero}
+      critical
+    />
     <div className={style.text}>
       <h1 className={style.section}>404 Not Found</h1>
       <p>

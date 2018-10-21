@@ -17,7 +17,7 @@ class Project extends Component {
 
     return (
       <article className={style.card}>
-        <div className={style.image}>{this.cardImage(image)}</div>
+        <div className={style.image} alt={this.cardImage(image)} />
         <div className={style.header}>
           <h3>
             <a href={project.link} target="_blank" rel="noopener noreferrer">

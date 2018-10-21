@@ -3,15 +3,13 @@ import Img from 'gatsby-image'
 import Link from 'gatsby-link'
 import Layout from '../components/Layout'
 import style from '../styles/page.module.scss'
+import image from '../images/404.jpg'
 
-const NotFoundPage = ({ data }) => (
+const NotFoundPage = () => (
   <Layout>
-    <Img
-      fluid={data.file.childImageSharp.fluid}
-      alt="hero"
-      className={style.hero}
-      critical
-    />
+    <div className={style.hero}>
+      <img src={image} alt="404" />
+    </div>
     <div className={style.text}>
       <h1 className={style.section}>404 Not Found</h1>
       <p>
@@ -21,17 +19,5 @@ const NotFoundPage = ({ data }) => (
     </div>
   </Layout>
 )
-
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "car.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 740, quality: 85) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-  }
-`
 
 export default NotFoundPage

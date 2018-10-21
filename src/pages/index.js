@@ -1,10 +1,11 @@
 import React from 'react'
+import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import PostPreview from '../components/PostPreview'
 import Project from '../components/Project'
 import ScrollingCards from '../components/ScrollingCards'
 import Contact from '../components/Contact'
-import { graphql } from 'gatsby'
 
 import style from '../styles/page.module.scss'
 
@@ -14,6 +15,12 @@ const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
   return (
     <Layout>
+      <Img
+        fluid={data.file.childImageSharp.fluid}
+        alt="hero"
+        className={style.hero}
+        critical
+      />
       <header className={style.text}>
         <p>Hi, I'm Brock.</p>
         <p>
@@ -100,12 +107,18 @@ export const query = graphql`
         node {
           name
           childImageSharp {
-            # Specify the image processing specifications right in the query.
-            # Makes it trivial to update as your page's design changes.
             fluid(maxWidth: 400) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
+        }
+      }
+    }
+
+    file(relativePath: { eq: "hero.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 740, quality: 85) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }

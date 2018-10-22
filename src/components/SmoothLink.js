@@ -143,7 +143,10 @@ class SmoothLink extends React.Component {
                 ? document.getElementById(hash.substr(1))
                 : null
               if (element !== null) {
-                element.scrollIntoView({ behavior: 'smooth' })
+                element.scrollIntoView({
+                  alignToTop: 'true',
+                  behavior: 'smooth',
+                })
               } else {
                 // This is just a normal link to the current page so let's emulate default
                 // browser behavior by scrolling now to the top of the page.

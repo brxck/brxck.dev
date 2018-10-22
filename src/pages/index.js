@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => {
         critical
       />
       <header className={style.text}>
-        <p>Hi, I'm Brock.</p>
+        <h1>Hi, I'm Brock McElroy.</h1>
         <p>
           I'm a web developer from Tucson, Arizona. I believe in sustainability
           in all things — I aim to write code that is performant,
@@ -30,9 +30,9 @@ const IndexPage = ({ data }) => {
         </p>
       </header>
       <main>
-        <h1 id="work" className={style.section}>
+        <h2 id="work" className={style.section}>
           work
-        </h1>
+        </h2>
         <div className={style.text}>
           <p>
             Lately I've been enjoying working with modern JavaScript front-ends
@@ -52,18 +52,18 @@ const IndexPage = ({ data }) => {
             <Project key={node.id} project={node} images={projectImages} />
           ))}
         </ScrollingCards>
-        <h1 id="posts" className={style.section}>
+        <h2 id="posts" className={style.section}>
           posts
-        </h1>
+        </h2>
         <ScrollingCards>
           {posts.map(({ node }) => (
             <PostPreview key={node.id} post={node} />
           ))}
         </ScrollingCards>
         <div className={style.text}>
-          <h1 id="mail" className={style.section}>
+          <h2 id="mail" className={style.section}>
             mail
-          </h1>
+          </h2>
           <Contact />
         </div>
       </main>

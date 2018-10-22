@@ -27,7 +27,7 @@ const Layout = ({ children }) => (
           meta={[
             {
               name: 'description',
-              content: `Web-developer working on sustainable and robust solutions in Rails and modern JavaScript.`,
+              content: `Brock McElroy is a web-developer working with modern JavaScript and Ruby on Rails.`,
             },
           ]}
         >

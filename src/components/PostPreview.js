@@ -15,7 +15,14 @@ const PostPreview = ({ post }) => {
           <p>{post.excerpt}</p>
         </div>
         <div className={style.footer}>
-          <span>{post.frontmatter.date}</span>
+          <div>
+            <ul className={style.tags}>
+              {post.frontmatter.tags.split(' ').map((tag, index) => (
+                <li key={index}>{tag}</li>
+              ))}
+            </ul>
+            <div className={style.date}>{post.frontmatter.date}</div>
+          </div>
         </div>
       </div>
     </article>

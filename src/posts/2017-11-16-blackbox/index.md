@@ -1,7 +1,7 @@
 ---
 title: "Blackbox"
 date: 2017-11-16
-categories: python game
+tags: Python Kivy Game CS50
 ---
 
 BlackBox is a puzzle game for desktop and mobile -- and a remake of a board game [Black Box](<https://www.wikipedia.org/en/Black_Box_(game)>). Its tagline: _The ultimate game of hide and seek._

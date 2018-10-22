@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import Helmet from 'react-helmet'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 import style from '../styles/page.module.scss'
 
 const PostTemplate = ({ data }) => {
@@ -34,7 +34,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "DD MMMM, YYYY")
-        categories
+        tags
       }
     }
   }

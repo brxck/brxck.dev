@@ -1,7 +1,7 @@
 ---
 title: "Creating a Post Feed with Active Record"
 date: 2018-01-28 
-categories: ruby rails web
+tags: Ruby Rails Web
 ---
 
 In my latest app I'm trying to create a post feed that displays a user's friends' posts along with their own posts. I did a lot of searching for the best way to do this and came up with a lot of ugly answers.

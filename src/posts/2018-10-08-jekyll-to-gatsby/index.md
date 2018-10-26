@@ -20,7 +20,7 @@ The best part about Jekyll is that it lets you generate blog posts from Markdown
 
 I originally chose Jekyll as my generator because it's supported by [GitHub Pages](https://pages.github.com/). All you've got to do is push your source up and GitHub will build and host it for you, for free! But you have to use Jekyll, and then only with predetermined plugins. Because I was was using custom Jekyll plugins, I was building my site locally and *then* pushing it up, so I had already lost some of that convenience. And actually, that is how you can use any static generator, like Gatsby, with GitHub Pages: build local, and push it up after. 
 
-But then again, maybe you've got better options. Building yourself and managing that generated site is kind of a hassle. I moved over to [Netlify.i](https://www.netlify.com/) They've got a free hosting tier, and as soon as you push up your Gatsby source they'll build and host it for you. On top of that, they make it really easy to manage SSL and even your DNS records.
+But then again, maybe you've got better options. Building yourself and managing that generated site is kind of a hassle. I moved over to [Netlify.](https://www.netlify.com/) They've got a free hosting tier, and as soon as you push up your Gatsby source they'll build and host it for you. On top of that, they make it really easy to manage SSL and even your DNS records.
 
 ## Pain Points
 

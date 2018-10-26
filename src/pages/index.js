@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => {
         critical
       />
       <header className={style.text}>
-        <h1>Hi, I'm Brock McElroy.</h1>
+        <h1>Hi, I'm Brock.</h1>
         <p>
           I'm a web developer from Tucson, Arizona. I believe in sustainability
           in all things — I aim to write code that is performant,

@@ -1,6 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import PostPreview from '../components/PostPreview'
 import Project from '../components/Project'
@@ -61,6 +61,7 @@ const IndexPage = ({ data }) => {
           ))}
         </ScrollingCards>
         <div className={style.text}>
+          <Link to="/archive">Archive →</Link>
           <h2 id="mail" className={style.section}>
             mail
           </h2>

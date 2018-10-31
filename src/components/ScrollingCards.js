@@ -17,7 +17,7 @@ class ScrollingCards extends Component {
 
   componentDidMount = () => {
     // Hide scrollbar and show buttons if javascript enabled
-    if (window.innerWidth > 769) {
+    if (window.innerWidth > 1200) {
       this.scrolling.current.style.overflow = 'hidden'
       this.left.current.style.display = 'block'
       this.right.current.style.display = 'block'

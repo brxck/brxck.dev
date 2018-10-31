@@ -34,8 +34,10 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Navigation />
-        <div className={style.content}>{children}</div>
-        <div className={style.cardLayout} />
+        <div className={style.wrapper}>
+          <div className={style.content}>{children}</div>
+          <div className={style.background} />
+        </div>
         <Social />
       </>
     )}

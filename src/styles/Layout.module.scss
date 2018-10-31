@@ -1,11 +1,17 @@
 @import 'variables';
 
-.content {
-  margin: 2rem auto;
-  max-width: 1400px;
+.wrapper {
+  margin-top: 2rem;
+  position: relative;
 }
 
-.cardLayout {
+.content {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding-bottom: 1rem;
+}
+
+.background {
   background-color: $white-bis;
   position: absolute;
   top: 0;
@@ -13,7 +19,7 @@
   left: 0;
   right: 0;
   max-width: 90vw;
-  margin: 4rem auto;
+  margin: 0 auto;
   border-radius: 10px;
   z-index: -1;
 

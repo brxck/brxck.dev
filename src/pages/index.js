@@ -61,7 +61,9 @@ const IndexPage = ({ data }) => {
           ))}
         </ScrollingCards>
         <div className={style.text}>
-          <Link to="/archive">Archive →</Link>
+          <div className={style.right}>
+            <Link to="/archive">archive →</Link>
+          </div>
           <h2 id="mail" className={style.section}>
             mail
           </h2>

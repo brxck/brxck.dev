@@ -19,15 +19,10 @@ const Navigation = props => (
     `}
     render={data => (
       <nav className={style.navigation}>
-        <SmoothLink to="/">
-          <Img
-            fixed={data.file.childImageSharp.fixed}
-            alt="icon"
-            critical
-            className={style.icon}
-          />
-        </SmoothLink>
         <ul>
+          <li>
+            <SmoothLink to="/">home</SmoothLink>
+          </li>
           <li>
             <SmoothLink to="#work">work</SmoothLink>
           </li>

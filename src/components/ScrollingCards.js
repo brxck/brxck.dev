@@ -34,6 +34,7 @@ class ScrollingCards extends Component {
       targets: scrolling,
       scrollLeft: paddingWidth - fadeWidth,
       delay: 100,
+
       callback: () => (scrolling.style.willChange = false),
     })
     this.animated = true
@@ -45,6 +46,8 @@ class ScrollingCards extends Component {
     const offset = scrolling.firstChild.clientWidth / 4
     anime({
       targets: scrolling,
+      duration: 800,
+      elasticity: 200,
       scrollLeft: Math.max(
         offset,
         Math.min(

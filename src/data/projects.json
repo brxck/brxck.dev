@@ -3,7 +3,7 @@
     "name": "TheFreedomTo",
     "repo": "",
     "link": "https://thefreedomto.store",
-    "technology": ["React", "Gatsby", "Serverless", "AWS", "Stripe"],
+    "technology": ["React", "Gatsby", "Serverless", "AWS", "GraphQL"],
     "date": "2018/11/25",
     "description": [
       "Buy unique vintage and embroidered goods.",

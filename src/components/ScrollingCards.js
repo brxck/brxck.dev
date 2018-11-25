@@ -47,7 +47,7 @@ class ScrollingCards extends Component {
     anime({
       targets: scrolling,
       duration: 800,
-      elasticity: 200,
+      elasticity: 100,
       scrollLeft: Math.max(
         offset,
         Math.min(

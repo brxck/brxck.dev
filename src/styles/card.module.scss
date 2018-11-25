@@ -37,16 +37,19 @@
   margin-top: 1rem;
 
   h3 {
+    font-weight: 600;
     font-size: 1.5rem;
     margin: 0;
   }
 
   a {
+    color: $gray-darker;
     text-decoration: none;
   }
 }
 
 .body {
+  color: $gray-dark;
   display: flex;
   flex-direction: column;
   flex-grow: 1;

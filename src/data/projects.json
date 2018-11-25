@@ -52,16 +52,5 @@
       "Social networking for non-humans. Bless your favorite comments, and smite the worst posts.",
       "Comes with a preloaded login for you to poke around."
     ]
-  },
-  {
-    "name": "Tasks",
-    "repo": "https://github.com/brxck/odin-tasks",
-    "link": "https://brockmcelroy.com/odin-tasks/",
-    "technology": ["JavaScript", "webpack", "Bulma", "Pug"],
-    "date": "2018/3/1",
-    "description": [
-      "Organize your todos into boards and projects with due dates, priorities, and descriptions.",
-      "Your data is stored between sessions."
-    ]
   }
 ]

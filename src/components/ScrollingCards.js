@@ -63,12 +63,20 @@ class ScrollingCards extends Component {
       <div className={style.container}>
         <Waypoint onEnter={this.animate} />
         <div className={style.left}>
-          <button ref={this.left} onClick={() => this.scroll(-400)}>
+          <button
+            ref={this.left}
+            onClick={() => this.scroll(-400)}
+            aria-label="scroll left"
+          >
             <Icon path={mdiChevronLeft} color="currentColor" />
           </button>
         </div>
         <div className={style.right}>
-          <button ref={this.right} onClick={() => this.scroll(400)}>
+          <button
+            ref={this.right}
+            onClick={() => this.scroll(400)}
+            aria-label="scroll right"
+          >
             <Icon path={mdiChevronRight} color="currentColor" />
           </button>
         </div>

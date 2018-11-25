@@ -97,6 +97,7 @@ export default class Contact extends Component {
           type="submit"
           className={style.submit}
           disabled={!!this.state.sent}
+          aria-label="submit"
         >
           <Icon
             path={mdiSend}

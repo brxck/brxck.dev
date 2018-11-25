@@ -24,9 +24,9 @@ class Project extends Component {
               {project.name}
             </a>
           </h3>
-          <a href={project.repo} target="_blank" rel="noopener noreferrer">
+          {project.repo && <a href={project.repo} target="_blank" rel="noopener noreferrer">
             <Icon path={mdiGithubCircle} size={1} color="hsl(0, 0%, 29%)" />
-          </a>
+          </a>}
         </div>
         <div className={style.body}>
           <div className={style.description}>

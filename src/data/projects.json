@@ -1,5 +1,16 @@
 [
   {
+    "name": "TheFreedomTo",
+    "repo": "",
+    "link": "https://thefreedomto.store",
+    "technology": ["React", "Gatsby", "Serverless", "AWS", "Stripe"],
+    "date": "2018/11/25",
+    "description": [
+      "Buy unique vintage and embroidered goods.",
+      "Full-featured ecommerce site, statically served, dynamically generated. Low-cost operation using serverless functions."
+    ]
+  },
+  {
     "name": "Brushstroke",
     "repo": "https://github.com/brxck/brushstroke",
     "link": "http://brushstroke.brockmcelroy.com/",

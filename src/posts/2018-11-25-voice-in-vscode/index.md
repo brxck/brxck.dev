@@ -1,6 +1,6 @@
 ---
 title: Voice Coding with VS Code
-date: 2018-11-02
+date: 2018-11-25
 tags: Voice-Coding VSCode
 ---
 

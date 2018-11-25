@@ -35,16 +35,12 @@ const IndexPage = ({ data }) => {
         </h2>
         <div className={style.text}>
           <p>
-            Lately I've been enjoying working with modern JavaScript front-ends
-            backed by Ruby on Rails APIs.
-          </p>
-          <p>
-            This site was made from scratch using Gatsby, React, and GraphQL.
-          </p>
-          <p>
             These are some of the things I've been working on recently. I keep
             more code and contributions over at my{' '}
             <a href="https://github.com/brxck">Github.</a>
+          </p>
+          <p>
+            This site was made from scratch using Gatsby, React, and GraphQL.
           </p>
         </div>
         <ScrollingCards>

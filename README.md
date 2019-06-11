@@ -1,1 +1,1 @@
-#[brxck.dev](https://brxck.dev)
+# [brxck.dev](https://brxck.dev)

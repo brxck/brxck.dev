@@ -24,9 +24,22 @@ const IndexPage = ({ data }) => {
       <header className={style.text}>
         <h1>Hi, I'm Brock.</h1>
         <p>
-          I'm a web developer from Tucson, Arizona. I believe in sustainability
-          in all things — I aim to write code that is performant,
+          I'm a full stack web developer from Tucson, Arizona. I believe in
+          sustainability in all things — I aim to write code that is performant,
           understandable, and robust.
+        </p>
+        <p>
+          As a self-taught developer, I am a quick and determined learner. I
+          embrace the opportunity to utilize new technologies, while I am
+          already experienced with MVC architectures and building modern
+          JavaScript user interfaces.
+        </p>
+        <p>
+          I am passionate about open source software, and I've become a more
+          effective developer by working with others to resolve issues and
+          deliver features. Maintaining my own open source package has given me
+          insight into writing code and documentation meant to be consumed by
+          others.
         </p>
       </header>
       <main>

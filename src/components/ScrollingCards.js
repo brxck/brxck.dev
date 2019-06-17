@@ -1,94 +1,99 @@
-import React, { Component } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Icon from '@mdi/react'
 import Waypoint from 'react-waypoint'
 import anime from 'animejs'
 import { mdiChevronRight, mdiChevronLeft } from '@mdi/js'
+
 import style from '../styles/ScrollingCards.module.scss'
 
-class ScrollingCards extends Component {
-  animated = false
+function ScrollingCards(props) {
+  const scrolling = useRef()
+  const left = useRef()
+  const right = useRef()
 
-  constructor(props) {
-    super(props)
-    this.scrolling = React.createRef()
-    this.left = React.createRef()
-    this.right = React.createRef()
-  }
+  const [animated, setAnimated] = useState(false)
 
-  componentDidMount = () => {
-    // Hide scrollbar and show buttons if javascript enabled
-    if (window.innerWidth > 1200) {
-      this.scrolling.current.style.overflow = 'hidden'
-      this.left.current.style.display = 'block'
-      this.right.current.style.display = 'block'
+  useEffect(() => {
+    function handleResize() {
+      // Hide scrollbar and show buttons if javascript enabled
+      if (window.innerWidth > 1500) {
+        scrolling.current.style.overflow = 'hidden'
+        left.current.style.display = 'block'
+        right.current.style.display = 'block'
+      } else {
+        scrolling.current.style.overflow = 'scroll'
+        left.current.style.display = 'hidden'
+        right.current.style.display = 'hidden'
+      }
     }
-  }
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
-  animate = () => {
-    if (this.animated === true) return
-    const scrolling = this.scrolling.current
-    const fadeWidth = scrolling.clientWidth * 0.05
-    const paddingWidth = scrolling.firstChild.clientWidth
-    scrolling.style.willChange = true
+  function animate() {
+    if (animated === true) return
+    const { current } = scrolling
+    const fadeWidth = current.clientWidth * 0.05
+    const paddingWidth = current.firstChild.clientWidth
+    current.style.willChange = true
     anime({
-      targets: scrolling,
+      targets: current,
       scrollLeft: paddingWidth - fadeWidth,
       delay: 100,
 
-      callback: () => (scrolling.style.willChange = false),
+      callback: () => (current.style.willChange = false),
     })
-    this.animated = true
+    setAnimated(true)
   }
 
-  scroll = amount => {
-    const scrolling = this.scrolling.current
-    const current = scrolling.scrollLeft
-    const offset = scrolling.firstChild.clientWidth / 4
+  function scroll(amount) {
+    const { current } = scrolling
+    const { scrollLeft } = current
+    const offset = current.firstChild.clientWidth / 4
     anime({
-      targets: scrolling,
+      targets: current,
       duration: 800,
       elasticity: 100,
       scrollLeft: Math.max(
         offset,
         Math.min(
-          current + amount,
-          scrolling.scrollWidth - scrolling.clientWidth - offset
+          scrollLeft + amount,
+          current.scrollWidth - current.clientWidth - offset
         )
       ),
     })
   }
 
-  render() {
-    return (
-      <div className={style.container}>
-        <Waypoint onEnter={this.animate} />
-        <div className={style.left}>
-          <button
-            ref={this.left}
-            onClick={() => this.scroll(-400)}
-            aria-label="scroll left"
-          >
-            <Icon path={mdiChevronLeft} color="currentColor" />
-          </button>
-        </div>
-        <div className={style.right}>
-          <button
-            ref={this.right}
-            onClick={() => this.scroll(400)}
-            aria-label="scroll right"
-          >
-            <Icon path={mdiChevronRight} color="currentColor" />
-          </button>
-        </div>
-
-        <div ref={this.scrolling} className={style.scrolling}>
-          <div className={style.padding} />
-          <>{this.props.children}</>
-          <div className={style.padding} />
-        </div>
+  return (
+    <div className={style.container}>
+      <Waypoint onEnter={animate} />
+      <div className={style.left}>
+        <button
+          ref={left}
+          onClick={() => scroll(-400)}
+          aria-label="scroll left"
+        >
+          <Icon path={mdiChevronLeft} color="currentColor" />
+        </button>
       </div>
-    )
-  }
+      <div className={style.right}>
+        <button
+          ref={right}
+          onClick={() => scroll(400)}
+          aria-label="scroll right"
+        >
+          <Icon path={mdiChevronRight} color="currentColor" />
+        </button>
+      </div>
+
+      <div ref={scrolling} className={style.scrolling}>
+        <div className={style.padding} />
+        <>{props.children}</>
+        <div className={style.padding} />
+      </div>
+    </div>
+  )
 }
 
 export default ScrollingCards

@@ -25,7 +25,7 @@
     "name": "Brushstroke",
     "repo": "https://github.com/brxck/brushstroke",
     "link": "http://brushstroke.brockmcelroy.com/",
-    "technology": ["Ruby", "Rails", "Action Cable", "WebSockets", "JavaScript"],
+    "technology": ["Ruby", "Rails", "WebSockets", "JavaScript"],
     "date": "2018/9/16",
     "description": [
       "Brushstroke uses your phone's gyroscope and a WebSockets connection to turn it into a remote paintbrush, allowing you to paint on your desktop or laptop screen."
@@ -35,22 +35,11 @@
     "name": "Castaway",
     "repo": "https://github.com/brxck/castaway",
     "link": "http://castaway.brockmcelroy.com/",
-    "technology": ["Ruby", "Rails", "JavaScript", "Stimulus", "webpacker"],
+    "technology": ["Ruby", "Rails", "JavaScript", "webpacker"],
     "date": "2018/8/20",
     "description": [
       "Discover, subscribe, and listen to podcasts in your browser.",
       "Features a built-from-scratch JavaScript audio player, progress tracking, and a responsive UI."
-    ]
-  },
-  {
-    "name": "CookieCounter",
-    "repo": "https://github.com/brxck/cookie-counter",
-    "link": "https://cookie-counter.herokuapp.com/",
-    "technology": ["Ruby", "Rails", "Bulma", "Slim"],
-    "date": "2018/5/1",
-    "description": [
-      "Inventory, order, and waste tracker for your local restaurant.",
-      "Features responsive UI, charts, low-stock alerts, and employee entries by PIN."
     ]
   }
 ]

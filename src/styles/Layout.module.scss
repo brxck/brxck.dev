@@ -6,6 +6,7 @@
 
 .content {
   margin: 0 auto;
+  max-width: 1400px;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -17,6 +18,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  max-width: 90vw;
   margin: 0 auto;
   border-radius: 10px;
   z-index: -1;

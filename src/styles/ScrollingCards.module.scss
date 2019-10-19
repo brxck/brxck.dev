@@ -10,15 +10,19 @@
   margin-top: 0.5rem;
   overflow: auto;
   position: relative;
-  transition: all 0.5s;
+  will-change: true;
 
-  @media (min-width: $tablet) {
+  // Firefox scrollbars
+  scrollbar-color: $gray-light $gray-dark;
+  scrollbar-width: thin;
+
+  @media (min-width: $tablet) { 
     mask-image: linear-gradient(
       to right,
-      transparent,
-      black 2%,
-      black 98%,
-      transparent
+      rgba(0, 0, 0, 0.2),
+      black 5%,
+      black 95%,
+      rgba(0, 0, 0, 0.2),
     );
   }
 }
@@ -26,41 +30,4 @@
 .padding {
   display: block;
   padding: 1px 5vw;
-}
-
-.left,
-.right {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  position: absolute;
-
-  @media (max-width: $tablet) {
-    display: none;
-  }
-
-  button {
-    background-color: transparent;
-    border: none;
-    color: $white-ter;
-    cursor: pointer;
-    display: none;
-    font-weight: 800;
-    height: 50px;
-    transition: transform 500ms;
-    width: 50px;
-  }
-
-  button:hover svg {
-    transform: scale(1.25);
-  }
-}
-
-.left {
-  left: -60px;
-}
-
-.right {
-  right: -60px;
 }

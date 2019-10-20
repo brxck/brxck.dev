@@ -20,12 +20,12 @@ function ScrollingCards(props) {
         anime({
             targets: current,
             scrollLeft: paddingWidth - fadeWidth,
-            delay: 100,
+            delay: 0,
       
             callback: () => (current.style.willChange = false),
           })
           setAnimated(true)
-    }, 500);
+    }, 200);
     setAnimated(true)
     current.style.willChange = false
   }

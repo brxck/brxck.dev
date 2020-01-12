@@ -19,14 +19,14 @@ const IndexPage = ({ data }) => {
         fluid={data.file.childImageSharp.fluid}
         alt="hero"
         className={style.hero}
-        critical
+        eager
       />
       <header className={style.text}>
         <h1>Hi, I'm Brock.</h1>
         <p>
-          I'm a full stack web developer at the University of Arizona in Tucson, AZ.
-          I believe in sustainability in all things — I aim to write code that is
-          performant, understandable, and robust.
+          I'm a full stack web developer at the University of Arizona in Tucson,
+          AZ. I believe in sustainability in all things — I aim to write code
+          that is performant, understandable, and robust.
         </p>
       </header>
       <main>

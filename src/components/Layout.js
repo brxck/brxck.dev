@@ -7,7 +7,6 @@ import { StaticQuery, graphql } from 'gatsby'
 import 'normalize.css'
 import '../styles/global.scss'
 import '../styles/typography.scss'
-import style from '../styles/Layout.module.scss'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -34,9 +33,9 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Navigation />
-        <div className={style.wrapper}>
-          <div className={style.content}>{children}</div>
-          <div className={style.background} />
+        <div>
+          <div>{children}</div>
+          <div />
         </div>
         <Social />
       </>

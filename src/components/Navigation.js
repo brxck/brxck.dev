@@ -1,8 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import SmoothLink from './SmoothLink'
-import style from '../styles/Navigation.module.scss'
 
 const Navigation = props => (
   <StaticQuery
@@ -18,7 +16,7 @@ const Navigation = props => (
       }
     `}
     render={data => (
-      <nav className={style.navigation}>
+      <nav>
         <ul>
           <li>
             <SmoothLink to="/">home</SmoothLink>

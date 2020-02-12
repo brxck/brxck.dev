@@ -41,18 +41,17 @@ html {
 
 body {
   color: $gray-darker;
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI',
-    Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol';
+  // TODO
+  font-family: 'Fira Code';
   line-height: 1.5;
 }
 
 h1 {
-    font-size: 2rem;
-    font-weight: 300;
+  font-size: 2rem;
+  font-weight: 300;
 }
 
 h2 {
-    font-size: 1.75rem;
-    font-weight: 300;
+  font-size: 1.75rem;
+  font-weight: 300;
 }

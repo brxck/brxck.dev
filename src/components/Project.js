@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Img from 'gatsby-image'
 import Icon from '@mdi/react'
 import { mdiGithubCircle } from '@mdi/js'
-import style from '../styles/card.module.scss'
 
 class Project extends Component {
   cardImage(image) {
@@ -16,9 +15,9 @@ class Project extends Component {
     )
 
     return (
-      <article className={style.card}>
-        <div className={style.image}>{this.cardImage(image)}</div>
-        <div className={style.header}>
+      <article>
+        <div>{this.cardImage(image)}</div>
+        <div>
           <h3>
             <a href={project.link} target="_blank" rel="noopener noreferrer">
               {project.name}
@@ -35,15 +34,15 @@ class Project extends Component {
             </a>
           )}
         </div>
-        <div className={style.body}>
-          <div className={style.description}>
+        <div>
+          <div>
             {project.description.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
             <p>{data}</p>
           </div>
-          <div className={style.footer}>
-            <ul className={style.tags}>
+          <div>
+            <ul>
               {project.technology.map((tech, index) => (
                 <li key={index}>{tech}</li>
               ))}

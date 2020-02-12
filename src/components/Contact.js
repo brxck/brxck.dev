@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Icon from '@mdi/react'
 import { mdiSend } from '@mdi/js'
-import style from '../styles/Contact.module.scss'
 
 function encode(data) {
   return Object.keys(data)
@@ -54,8 +53,8 @@ export default class Contact extends Component {
             <input name="bot-field" onChange={this.handleChange} />
           </label>
         </div>
-        <div className={style.group}>
-          <div className={style.field}>
+        <div>
+          <div>
             <label htmlFor="email">Your Email</label>
             <input
               type="email"
@@ -67,7 +66,7 @@ export default class Contact extends Component {
               required
             />
           </div>
-          <div className={style.field}>
+          <div>
             <label htmlFor="subject">Subject</label>
             <input
               type="text"
@@ -80,7 +79,7 @@ export default class Contact extends Component {
             />
           </div>
         </div>
-        <div className={style.field}>
+        <div>
           <label htmlFor="message">Message</label>
           <textarea
             name="message"
@@ -93,12 +92,7 @@ export default class Contact extends Component {
             required
           />
         </div>
-        <button
-          type="submit"
-          className={style.submit}
-          disabled={!!this.state.sent}
-          aria-label="submit"
-        >
+        <button type="submit" disabled={!!this.state.sent} aria-label="submit">
           <Icon
             path={mdiSend}
             size={0.75}

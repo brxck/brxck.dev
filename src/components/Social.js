@@ -1,9 +1,8 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import style from '../styles/Navigation.module.scss'
 
 const Navigation = () => (
-  <nav className={style.navigation}>
+  <nav>
     <ul>
       <StaticQuery
         query={graphql`

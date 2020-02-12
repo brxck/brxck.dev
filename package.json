@@ -31,8 +31,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-typography": "^0.16.19",
-    "react-waypoint": "^8.1.0"
+    "react-typography": "^0.16.19"
   },
   "keywords": [
     "gatsby"

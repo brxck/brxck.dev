@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import PostPreview from '../components/PostPreview'
 import Project from '../components/Project'
-import ScrollingCards from '../components/ScrollingCards'
 import Contact from '../components/Contact'
 
 import style from '../styles/page.module.scss'
@@ -43,19 +42,19 @@ const IndexPage = ({ data }) => {
             This site was made from scratch using Gatsby, React, and GraphQL.
           </p>
         </div>
-        <ScrollingCards>
+        <div className={style.cards}>
           {projects.map(({ node }) => (
             <Project key={node.id} project={node} images={projectImages} />
           ))}
-        </ScrollingCards>
+        </div>
         <h2 id="posts" className={style.section}>
           posts
         </h2>
-        <ScrollingCards>
+        <div className={style.cards}>
           {posts.map(({ node }) => (
             <PostPreview key={node.id} post={node} />
           ))}
-        </ScrollingCards>
+        </div>
         <div className={style.text}>
           <div className={style.right}>
             <Link to="/archive">archive →</Link>

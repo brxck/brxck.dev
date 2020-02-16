@@ -1,5 +1,4 @@
 @import 'prism';
-@import 'variables';
 
 // https://codepen.io/chriscoyier/pen/pPRGLP/
 
@@ -40,7 +39,6 @@ html {
 }
 
 body {
-  color: $gray-darker;
   // TODO
   font-family: 'Fira Code';
   line-height: 1.5;

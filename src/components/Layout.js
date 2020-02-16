@@ -1,12 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import styled from 'styled-components'
 import Navigation from './Navigation'
 import Social from './Social'
 import { StaticQuery, graphql } from 'gatsby'
 import 'normalize.css'
-import '../styles/global.scss'
 import '../styles/typography.scss'
+
+const Container = styled.div`
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -32,12 +38,11 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Navigation />
-        <div>
-          <div>{children}</div>
-          <div />
-        </div>
-        <Social />
+        <Container>
+          <Navigation />
+          {children}
+          <Social />
+        </Container>
       </>
     )}
   />

@@ -1,6 +1,19 @@
 import React from 'react'
+import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 import SmoothLink from './SmoothLink'
+
+const List = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: inline;
+    padding: 1rem 2rem;
+  }
+`
 
 const Navigation = props => (
   <StaticQuery
@@ -17,7 +30,7 @@ const Navigation = props => (
     `}
     render={data => (
       <nav>
-        <ul>
+        <List>
           <li>
             <SmoothLink to="/">home</SmoothLink>
           </li>
@@ -30,7 +43,7 @@ const Navigation = props => (
           <li>
             <SmoothLink to="#mail">mail</SmoothLink>
           </li>
-        </ul>
+        </List>
       </nav>
     )}
   />

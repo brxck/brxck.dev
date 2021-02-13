@@ -6,7 +6,6 @@ import PostPreview from '../components/PostPreview'
 import Project from '../components/Project'
 import ScrollingCards from '../components/ScrollingCards'
 import Contact from '../components/Contact'
-
 import style from '../styles/page.module.scss'
 
 const IndexPage = ({ data }) => {
@@ -24,9 +23,9 @@ const IndexPage = ({ data }) => {
       <header className={style.text}>
         <h1>Hi, I'm Brock.</h1>
         <p>
-          I'm a full stack web developer at the University of Arizona in Tucson, AZ.
-          I believe in sustainability in all things — I aim to write code that is
-          performant, understandable, and robust.
+          I'm a full stack web developer at the University of Arizona in Tucson,
+          AZ. I believe in sustainability in all things — I aim to write code
+          that is performant, understandable, and robust.
         </p>
       </header>
       <main>

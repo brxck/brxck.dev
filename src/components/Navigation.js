@@ -1,41 +1,24 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import SmoothLink from './SmoothLink'
 import style from '../styles/Navigation.module.scss'
 
-const Navigation = props => (
-  <StaticQuery
-    query={graphql`
-      query IconQuery {
-        file(relativePath: { eq: "icon.png" }) {
-          childImageSharp {
-            fixed(width: 32, quality: 85) {
-              ...GatsbyImageSharpFixed_withWebp_tracedSVG
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <nav className={style.navigation}>
-        <ul>
-          <li>
-            <SmoothLink to="/">home</SmoothLink>
-          </li>
-          <li>
-            <SmoothLink to="#work">work</SmoothLink>
-          </li>
-          <li>
-            <SmoothLink to="#posts">posts</SmoothLink>
-          </li>
-          <li>
-            <SmoothLink to="#mail">mail</SmoothLink>
-          </li>
-        </ul>
-      </nav>
-    )}
-  />
+const Navigation = () => (
+  <nav className={style.navigation}>
+    <ul>
+      <li>
+        <SmoothLink to="/">home</SmoothLink>
+      </li>
+      <li>
+        <SmoothLink to="#work">work</SmoothLink>
+      </li>
+      <li>
+        <SmoothLink to="#posts">posts</SmoothLink>
+      </li>
+      <li>
+        <SmoothLink to="#mail">mail</SmoothLink>
+      </li>
+    </ul>
+  </nav>
 )
 
 export default Navigation

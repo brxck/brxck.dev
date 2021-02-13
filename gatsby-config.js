@@ -1,13 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: 'Brock McElroy',
     siteUrl: 'https://brxck.dev',
+    title: 'Brock McElroy',
+    description:
+      'Brock McElroy is a full stack web developer finding robust, accessible solutions.',
+    github: 'https://github.com/brxck',
+    instagram: 'https://instagram.com/br__ck',
+    twitter: 'https://twitter.com/3rxck',
+    linkedin: 'https://linkedin.com/in/brockmcelroy',
   },
   plugins: [
     'gatsby-plugin-netlify',
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-transformer-sharp',
@@ -34,8 +39,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'data',
-        path: `${__dirname}/src/data`,
+        name: 'projects',
+        path: `${__dirname}/src/projects`,
       },
     },
     {

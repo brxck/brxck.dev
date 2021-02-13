@@ -7,9 +7,8 @@ import ScrollingCards from '../components/ScrollingCards'
 import Contact from '../components/Contact'
 
 const IndexPage = ({ data }) => {
-  const projects = data.allProjectsJson.edges
-  const projectImages = data.allFile.edges
-  const posts = data.allMarkdownRemark.edges
+  const { posts, projects } = data
+  console.log(data)
   return (
     <Layout>
       <header id="home">
@@ -20,9 +19,10 @@ const IndexPage = ({ data }) => {
           that is performant, understandable, and robust.
         </p>
       </header>
+      <h2 id="posts">posts</h2>
       <ScrollingCards>
-        {posts.map(({ node }) => (
-          <PostPreview key={node.id} post={node} />
+        {posts.nodes.map((post) => (
+          <PostPreview key={post.fields.slug} post={post} />
         ))}
       </ScrollingCards>
       <div>
@@ -42,11 +42,10 @@ const IndexPage = ({ data }) => {
           </p>
         </div>
         <ScrollingCards>
-          {projects.map(({ node }) => (
-            <Project key={node.id} project={node} images={projectImages} />
+          {projects.nodes.map((project) => (
+            <Project key={project.frontmatter.title} project={project} />
           ))}
         </ScrollingCards>
-        <h2 id="posts">posts</h2>
       </main>
     </Layout>
   )
@@ -54,45 +53,40 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    allProjectsJson {
-      edges {
-        node {
-          name
+    site: site {
+      siteMetadata {
+        title
+      }
+    }
+    posts: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/posts/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      nodes {
+        frontmatter {
+          title
+          date(formatString: "DD MMMM, YYYY")
+          tags
+        }
+        fields {
+          slug
+        }
+        excerpt
+      }
+    }
+
+    projects: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/projects/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      nodes {
+        frontmatter {
+          title
           repo
-          link
-          technology
-          date
-          description
+          date(formatString: "DD MMMM, YYYY")
+          tags
         }
-      }
-    }
-
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-            tags
-          }
-          fields {
-            slug
-          }
-          excerpt
-        }
-      }
-    }
-
-    allFile(filter: { relativePath: { regex: "/^projects.*.png/" } }) {
-      edges {
-        node {
-          name
-          childImageSharp {
-            fluid(maxWidth: 400) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
+        html
       }
     }
   }

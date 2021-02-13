@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Brock McElroy',
-    siteUrl: 'https://brockmcelroy.com',
+    siteUrl: 'https://brxck.dev',
   },
   plugins: [
     'gatsby-plugin-netlify',
@@ -18,8 +18,8 @@ module.exports = {
         name: 'Brock McElroy',
         short_name: 'Brock McElroy',
         start_url: '/',
-        background_color: '#2b5876',
-        theme_color: '#2b5876',
+        background_color: '#FFFFFF',
+        theme_color: '#FFFFFF',
         display: 'minimal-ui',
         icon: 'src/images/icon.png', // This path is relative to the root of the site.
       },

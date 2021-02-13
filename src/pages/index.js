@@ -1,12 +1,10 @@
 import React from 'react'
-import Img from 'gatsby-image'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import PostPreview from '../components/PostPreview'
 import Project from '../components/Project'
 import ScrollingCards from '../components/ScrollingCards'
 import Contact from '../components/Contact'
-import style from '../styles/page.module.scss'
 
 const IndexPage = ({ data }) => {
   const projects = data.allProjectsJson.edges
@@ -14,13 +12,7 @@ const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
   return (
     <Layout>
-      <Img
-        fluid={data.file.childImageSharp.fluid}
-        alt="hero"
-        className={style.hero}
-        critical
-      />
-      <header className={style.text}>
+      <header id="home">
         <h1>Hi, I'm Brock.</h1>
         <p>
           I'm a full stack web developer at the University of Arizona in Tucson,
@@ -28,18 +20,25 @@ const IndexPage = ({ data }) => {
           that is performant, understandable, and robust.
         </p>
       </header>
+      <ScrollingCards>
+        {posts.map(({ node }) => (
+          <PostPreview key={node.id} post={node} />
+        ))}
+      </ScrollingCards>
+      <div>
+        <div>
+          <Link to="/archive">archive →</Link>
+        </div>
+        <h2 id="mail">mail</h2>
+        <Contact />
+      </div>
       <main>
-        <h2 id="work" className={style.section}>
-          work
-        </h2>
-        <div className={style.text}>
+        <h2 id="work">work</h2>
+        <div>
           <p>
             These are some of the things I've been working on recently. I keep
             more code and contributions over at my{' '}
             <a href="https://github.com/brxck">Github.</a>
-          </p>
-          <p>
-            This site was made from scratch using Gatsby, React, and GraphQL.
           </p>
         </div>
         <ScrollingCards>
@@ -47,23 +46,7 @@ const IndexPage = ({ data }) => {
             <Project key={node.id} project={node} images={projectImages} />
           ))}
         </ScrollingCards>
-        <h2 id="posts" className={style.section}>
-          posts
-        </h2>
-        <ScrollingCards>
-          {posts.map(({ node }) => (
-            <PostPreview key={node.id} post={node} />
-          ))}
-        </ScrollingCards>
-        <div className={style.text}>
-          <div className={style.right}>
-            <Link to="/archive">archive →</Link>
-          </div>
-          <h2 id="mail" className={style.section}>
-            mail
-          </h2>
-          <Contact />
-        </div>
+        <h2 id="posts">posts</h2>
       </main>
     </Layout>
   )
@@ -109,14 +92,6 @@ export const query = graphql`
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
-        }
-      }
-    }
-
-    file(relativePath: { eq: "hero.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 740, quality: 85) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }

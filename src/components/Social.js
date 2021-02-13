@@ -1,6 +1,5 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import style from '../styles/Navigation.module.scss'
 
 const Social = () => {
   const data = useStaticQuery(graphql`
@@ -14,9 +13,9 @@ const Social = () => {
     }
   `)
   return (
-    <nav className={style.navigation}>
+    <nav>
       <ul>
-        {Object.entries(data).map(([name, link]) => (
+        {Object.entries(data.dataJson).map(([name, link]) => (
           <li key={name}>
             <a href={link}>{name}</a>
           </li>

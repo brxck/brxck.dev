@@ -7,11 +7,20 @@ import { useStaticQuery, graphql } from 'gatsby'
 import 'normalize.css'
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
+  const { site, social } = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
           title
+          description
+        }
+      }
+      social: site {
+        siteMetadata {
+          github
+          twitter
+          instagram
+          linkedin
         }
       }
     }
@@ -19,11 +28,11 @@ const Layout = ({ children }) => {
   return (
     <>
       <Helmet
-        title={data.site.siteMetadata.title}
+        title={site.siteMetadata.title}
         meta={[
           {
             name: 'description',
-            content: `Brock McElroy is a full stack web developer finding robust, accessible solutions.`,
+            content: site.siteMetadata.description,
           },
         ]}
       >
@@ -34,7 +43,7 @@ const Layout = ({ children }) => {
         <div>{children}</div>
         <div />
       </div>
-      <Social />
+      <Social links={social.siteMetadata} />
     </>
   )
 }

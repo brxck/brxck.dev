@@ -16,7 +16,7 @@ const PostPreview = ({ post }) => {
         <div>
           <div>
             <ul>
-              {post.frontmatter.tags.split(' ').map((tag, index) => (
+              {post.frontmatter.tags.map((tag, index) => (
                 <li key={index}>{tag}</li>
               ))}
             </ul>

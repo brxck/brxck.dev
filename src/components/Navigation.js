@@ -1,21 +1,19 @@
 import React from 'react'
-import SmoothLink from './SmoothLink'
-import style from '../styles/Navigation.module.scss'
 
 const Navigation = () => (
-  <nav className={style.navigation}>
+  <nav>
     <ul>
       <li>
-        <SmoothLink to="/">home</SmoothLink>
+        <a href="#home">home</a>
       </li>
       <li>
-        <SmoothLink to="#work">work</SmoothLink>
+        <a href="#work">work</a>
       </li>
       <li>
-        <SmoothLink to="#posts">posts</SmoothLink>
+        <a href="#writing">writing</a>
       </li>
       <li>
-        <SmoothLink to="#mail">mail</SmoothLink>
+        <a href="#contact">contact</a>
       </li>
     </ul>
   </nav>

@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from '../components/Layout'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import style from '../styles/page.module.scss'
 
 const PostTemplate = ({ data }) => {
   const post = data.markdownRemark
@@ -17,9 +16,9 @@ const PostTemplate = ({ data }) => {
           },
         ]}
       />
-      <article className={style.text}>
+      <article>
         <h1>{post.frontmatter.title}</h1>
-        <h2 className={style.subtitle}>{post.frontmatter.date}</h2>
+        <h2>{post.frontmatter.date}</h2>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </article>
     </Layout>

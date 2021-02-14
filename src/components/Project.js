@@ -4,10 +4,12 @@ import Icon from '@mdi/react'
 import { mdiGithubCircle } from '@mdi/js'
 
 const Project = ({ project }) => {
-  const { title, repo, tags, link } = project.frontmatter
+  const { title, repo, tags, link, preview } = project.frontmatter
   return (
     <article>
-      <div></div>
+      <div>
+        <Img fluid={preview.childImageSharp.fluid}></Img>
+      </div>
       <div>
         <h3>
           <a href={link || ''} target="_blank" rel="noopener noreferrer">
@@ -27,7 +29,7 @@ const Project = ({ project }) => {
       </div>
       <div>
         <div>
-          <p>{project.html}</p>
+          <p dangerouslySetInnerHTML={{ __html: project.html }}></p>
         </div>
         <div>
           <ul>

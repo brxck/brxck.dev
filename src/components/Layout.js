@@ -1,10 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Navigation from './Navigation'
-import Social from './Social'
 import { useStaticQuery, graphql } from 'gatsby'
 import 'normalize.css'
+
+import Navigation from './Navigation'
+import Social from './Social'
+import 'inter-ui/inter.css'
+import '../styles/typography.css'
 
 const Layout = ({ children }) => {
   const { site, social } = useStaticQuery(graphql`
@@ -27,15 +30,9 @@ const Layout = ({ children }) => {
   `)
   return (
     <>
-      <Helmet
-        title={site.siteMetadata.title}
-        meta={[
-          {
-            name: 'description',
-            content: site.siteMetadata.description,
-          },
-        ]}
-      >
+      <Helmet>
+        <title>{site.siteMetadata.title}</title>
+        <meta name="description" content={site.siteMetadata.description} />
         <html lang="en" />
       </Helmet>
       <Navigation />

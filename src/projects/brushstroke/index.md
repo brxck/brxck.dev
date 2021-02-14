@@ -1,6 +1,7 @@
 ---
 title: Brushstroke
 repo: https://github.com/brxck/brushstroke
+link: http://brushstroke.brockmcelroy.com
 tags: [Ruby, Rails, Websockets, JavaScript]
 date: 2018-09-16
 preview: preview.png

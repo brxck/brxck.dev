@@ -1,6 +1,7 @@
 ---
 title: TheFreedomTo
 repo: null
+link: https://thefreedomto.shop
 tags: [React, Gatsby, Serverless, AWS]
 date: 2018-11-25
 preview: preview.png

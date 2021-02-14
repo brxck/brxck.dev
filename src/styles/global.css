@@ -9,7 +9,3 @@ main,
 #___gatsby > div {
   position: relative;
 }
-
-html {
-  background-image: linear-gradient(-20deg, #4e4376 0%, #2b5876 100%);
-}

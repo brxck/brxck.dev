@@ -8,6 +8,7 @@ import Navigation from './Navigation'
 import Social from './Social'
 import 'inter-ui/inter.css'
 import '../styles/typography.css'
+import '../styles/prism.css'
 
 const Layout = ({ children }) => {
   const { site, social } = useStaticQuery(graphql`

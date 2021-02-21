@@ -4,8 +4,6 @@ date: 2021-02-18
 tags: [Vue, JavaScript]
 ---
 
-#
-
 ## Doc gen
 
 https://github.com/vue-styleguidist/vue-styleguidist/tree/dev/packages/vue-docgen-api
@@ -42,3 +40,10 @@ export const Primary = Template.bind({})
 ```
 
 ## Naming Stories
+
+## Components from Stories
+
+## Actions
+
+https://github.com/storybookjs/storybook/discussions/11372#discussioncomment-32947
+import { action } from '@storybook/addon-actions'

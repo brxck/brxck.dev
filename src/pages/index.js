@@ -9,7 +9,7 @@ const IndexPage = ({ data }) => {
   const { posts, projects } = data
   return (
     <Layout>
-      <header id="home">
+      <header>
         <h1>Hi, I'm Brock.</h1>
         <p>
           I'm a full stack developer creating applications that make the

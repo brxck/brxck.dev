@@ -11,14 +11,16 @@ const IndexPage = ({ data }) => {
     <Layout>
       <header>
         <h1>Hi, I'm Brock.</h1>
-        <p>
-          I'm a full stack developer creating applications that make the
-          University of Arizona a better place to learn and work.
-        </p>
-        <p>
-          When I'm not coding, I prefer to be in a hammock or planning a
-          backpacking trip into the wilderness.
-        </p>
+        <div className="content">
+          <p>
+            I'm a full stack developer creating applications that make the
+            University of Arizona a better place to learn and work.
+          </p>
+          <p>
+            When I'm not coding, I prefer to be in a hammock or planning a
+            backpacking trip into the wilderness.
+          </p>
+        </div>
       </header>
       <main>
         <h2 id="posts">posts</h2>

@@ -30,9 +30,7 @@ const Layout = ({ children }) => {
         <html lang="en" />
       </Helmet>
 
-      {/* green dark, blue light */}
-
-      <div className="absolute bottom-0 w-full max-w-3xl mb-3 transform -translate-x-1/2 top-44 left-1/2">
+      <aside className="absolute bottom-0 w-full max-w-3xl mb-3 transform -translate-x-1/2 top-44 left-1/2">
         {/* Background shapes! */}
         <div
           className="absolute w-full origin-top-left transform translate-y-24 bg-indigo-700 dark:bg-green-700 h-2/3 -right-64 rounded-mega rotate-12"
@@ -54,7 +52,7 @@ const Layout = ({ children }) => {
           </ul>
         </nav>
 
-        <nav className="absolute text-2xl italic font-black leading-snug tracking-wide text-indigo-100 underline dark:text-green-100 top-64 -right-52 w-44">
+        <nav className="absolute text-2xl italic font-black leading-snug tracking-wide text-indigo-100 underline top-64 -right-52 w-44 dark:text-green-100">
           <ul>
             <li>
               <Link to="/#home">home</Link>
@@ -70,28 +68,18 @@ const Layout = ({ children }) => {
             </li>
           </ul>
         </nav>
-      </div>
+      </aside>
 
       <div className="flex flex-col h-full lg:items-center">
         <h1
-          className="z-10 pl-10 italic font-black tracking-wider text-center text-indigo-500 dark:text-green-500 text-7xl md:text-8xl"
+          className="z-10 pl-10 italic font-black tracking-wider text-center text-indigo-500 dark:text-green-500 text-8xl"
           style={{ marginBottom: '-2.5rem' }}
         >
-          <div className="mt-5 -mb-3">Brock</div>{' '}
-          <div>
-            M
-            <span
-              className="relative pb-8 tracking-tight"
-              style={{ top: '-0.18em', fontSize: '5.5rem' }}
-            >
-              c
-            </span>
-            Elroy
-          </div>
+          <div className="mt-5 -mb-3">Brock</div> <div>McElroy</div>
         </h1>
 
         <div className="h-full max-w-3xl" style={{ minHeight: '74vh' }}>
-          <main className="relative p-16 text-gray-900 -translate-y-2 left-5 dark:text-gray-50">
+          <main className="relative p-16 text-gray-900 left-2 dark:text-gray-50">
             {children}
           </main>
         </div>

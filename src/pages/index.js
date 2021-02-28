@@ -10,10 +10,10 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <header>
-        <h2 className="text-3xl italic font-black leading-snug tracking-wide text-indigo-500 dark:text-green-500">
+        <h2 className="mb-3 text-4xl italic font-black leading-snug tracking-wide text-indigo-500 dark:text-green-500">
           Hi, I'm Brock.
         </h2>
-        <div className="my-3 content">
+        <div className="prose dark:prose-dark">
           <p>
             I'm a full stack developer creating applications that make the
             University of Arizona a better place to learn and work.
@@ -22,12 +22,28 @@ const IndexPage = ({ data }) => {
             When I'm not coding, I prefer to be in a hammock or planning a
             backpacking trip into the wilderness.
           </p>
+          <p>
+            A a arcu taciti diam vitae suspendisse hendrerit ut sit sociis ut
+            nunc elementum integer mi blandit hendrerit lorem.Vulputate vitae
+            suspendisse a cubilia massa suscipit molestie himenaeos nascetur
+            integer ac posuere per porta a dignissim consequat parturient
+            tincidunt hac nam.Eget convallis a nibh fames dui fringilla
+            consectetur magnis a.
+          </p>
+          <p>
+            Himenaeos in fusce a lacus nibh parturient phasellus facilisi erat
+            curae morbi cum habitant feugiat a aptent habitant.Duis vulputate
+            mus a molestie diam parturient a euismod dapibus tempor ultrices
+            lacus a fusce scelerisque sapien.Nulla aliquet a vestibulum aliquet
+            vivamus ipsum a a suspendisse a velit consectetur dictum primis nunc
+            cursus porta.Cursus morbi platea a dignissim scelerisque lacinia.
+          </p>
         </div>
       </header>
       <main>
         <h3
-          className="mt-3 mb-2 text-2xl italic font-black leading-snug tracking-wide text-indigo-500 dark:text-green-500"
-          id="posts"
+          className="mt-3 mb-2 text-3xl italic font-black leading-snug tracking-wide text-indigo-500 dark:text-green-500"
+          id="writing"
         >
           writing
         </h3>
@@ -35,8 +51,9 @@ const IndexPage = ({ data }) => {
           <PostPreview key={post.fields.slug} post={post} />
         ))}
         <Link to="/archive">archive →</Link>
+
         <h3
-          className="mt-3 mb-2 text-2xl italic font-black leading-snug tracking-wide text-indigo-500 dark:text-green-500"
+          className="mt-3 mb-2 text-3xl italic font-black leading-snug tracking-wide text-indigo-500 dark:text-green-500"
           id="work"
         >
           work
@@ -49,8 +66,9 @@ const IndexPage = ({ data }) => {
         {projects.nodes.map((project) => (
           <Project key={project.frontmatter.title} project={project} />
         ))}
+
         <h3
-          className="mt-3 mb-2 text-2xl italic font-black leading-snug tracking-wide text-indigo-500 dark:text-green-500"
+          className="mt-3 mb-2 text-3xl italic font-black leading-snug tracking-wide text-indigo-500 dark:text-green-500"
           id="contact"
         >
           contact

@@ -10,17 +10,13 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <header>
-        <h2 className="mb-3 text-4xl italic font-black leading-snug tracking-wide text-indigo-500 dark:text-green-500">
+        <h1 className="mb-3 text-4xl italic font-black tracking-wide text-indigo-500 dark:text-green-500">
           Hi, I'm Brock.
-        </h2>
+        </h1>
         <div className="prose dark:prose-dark">
           <p>
             I'm a full stack developer creating applications that make the
             University of Arizona a better place to learn and work.
-          </p>
-          <p>
-            When I'm not coding, I prefer to be in a hammock or planning a
-            backpacking trip into the wilderness.
           </p>
           <p>
             A a arcu taciti diam vitae suspendisse hendrerit ut sit sociis ut
@@ -31,48 +27,52 @@ const IndexPage = ({ data }) => {
             consectetur magnis a.
           </p>
           <p>
-            Himenaeos in fusce a lacus nibh parturient phasellus facilisi erat
-            curae morbi cum habitant feugiat a aptent habitant.Duis vulputate
-            mus a molestie diam parturient a euismod dapibus tempor ultrices
-            lacus a fusce scelerisque sapien.Nulla aliquet a vestibulum aliquet
-            vivamus ipsum a a suspendisse a velit consectetur dictum primis nunc
-            cursus porta.Cursus morbi platea a dignissim scelerisque lacinia.
+            When I'm not coding, I prefer to be in a hammock or planning a
+            backpacking trip into the wilderness.
           </p>
         </div>
       </header>
-      <main>
-        <h3
-          className="mt-3 mb-2 text-3xl italic font-black leading-snug tracking-wide text-indigo-500 dark:text-green-500"
-          id="writing"
-        >
-          writing
-        </h3>
-        {posts.nodes.map((post) => (
-          <PostPreview key={post.fields.slug} post={post} />
-        ))}
-        <Link to="/archive">archive →</Link>
 
-        <h3
-          className="mt-3 mb-2 text-3xl italic font-black leading-snug tracking-wide text-indigo-500 dark:text-green-500"
-          id="work"
+      <main>
+        <div className="flex items-center justify-between mt-6 mb-5">
+          <Link to="/archive">
+            <h2 className="heading" id="writing">
+              writing
+            </h2>
+          </Link>
+          <Link className="text-lg italic" to="/archive">
+            more →
+          </Link>
+        </div>
+        <div
+          className="relative flex gap-4 -left-1/3"
+          style={{ width: '166%' }}
         >
+          {posts.nodes.map((post) => (
+            <PostPreview key={post.fields.slug} post={post} />
+          ))}
+        </div>
+
+        <h2 className="mt-6 mb-3 heading" id="work">
           work
-        </h3>
+        </h2>
         <p>
-          Here is a selection of my peronal projects and open source work. I
-          keep more code and contributions over at my{' '}
+          A selection of my peronal projects and open source work. I keep more
+          code and contributions over at my{' '}
           <a href="https://github.com/brxck">Github.</a>
         </p>
-        {projects.nodes.map((project) => (
-          <Project key={project.frontmatter.title} project={project} />
-        ))}
-
-        <h3
-          className="mt-3 mb-2 text-3xl italic font-black leading-snug tracking-wide text-indigo-500 dark:text-green-500"
-          id="contact"
+        <div
+          className="relative flex flex-wrap items-stretch justify-center gap-4 mt-5 -left-1/3"
+          style={{ width: '166%' }}
         >
+          {projects.nodes.map((project) => (
+            <Project key={project.frontmatter.title} project={project} />
+          ))}
+        </div>
+
+        <h2 className="mt-6 mb-3 heading" id="contact">
           contact
-        </h3>
+        </h2>
         <Contact />
       </main>
     </Layout>
@@ -82,6 +82,7 @@ const IndexPage = ({ data }) => {
 export const query = graphql`
   {
     posts: allMarkdownRemark(
+      limit: 3
       filter: { fileAbsolutePath: { regex: "/posts/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
@@ -99,6 +100,7 @@ export const query = graphql`
     }
 
     projects: allMarkdownRemark(
+      limit: 3
       filter: { fileAbsolutePath: { regex: "/projects/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {

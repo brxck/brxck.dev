@@ -8,11 +8,13 @@ const Archive = ({ data }) => {
   return (
     <Layout>
       <header>
-        <h1 style={{ textAlign: 'center' }}>archive</h1>
+        <h1 className="mb-5 heading">writings archive</h1>
       </header>
-      <main>
+      <main className="flex flex-wrap gap-4 -ml-36" style={{ width: '130%' }}>
         {posts.map(({ node }) => (
-          <PostPreview key={node.id} post={node} />
+          <div key={node.id} className="flex flex-grow w-1/4">
+            <PostPreview post={node} />
+          </div>
         ))}
       </main>
     </Layout>
@@ -21,7 +23,10 @@ const Archive = ({ data }) => {
 
 export const query = graphql`
   {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/posts/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
           frontmatter {

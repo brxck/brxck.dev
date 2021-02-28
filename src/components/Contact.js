@@ -52,10 +52,11 @@ const Contact = () => {
           <input name="bot-field" onChange={handleChange} />
         </label>
       </div>
-      <div>
-        <div>
+      <div className="flex mb-3">
+        <div className="mr-5">
           <label htmlFor="email">Your Email</label>
           <input
+            className="w-full rounded-xl dark:bg-gray-900 dark:border-green-500"
             type="email"
             id="email"
             name="email"
@@ -68,6 +69,7 @@ const Contact = () => {
         <div>
           <label htmlFor="subject">Subject</label>
           <input
+            className="w-full rounded-xl dark:bg-gray-900 dark:border-green-500"
             type="text"
             id="subject"
             name="subject"
@@ -81,6 +83,7 @@ const Contact = () => {
       <div>
         <label htmlFor="message">Message</label>
         <textarea
+          className="w-full rounded-xl dark:bg-gray-900 dark:border-green-500"
           name="message"
           id="message"
           cols={50}
@@ -91,9 +94,14 @@ const Contact = () => {
           required
         />
       </div>
-      <button type="submit" disabled={!!state.sent} aria-label="submit">
+      <button
+        className="flex items-center justify-center w-full py-2 mt-3 text-white bg-indigo-600 rounded-xl dark:bg-green-500"
+        type="submit"
+        disabled={!!state.sent}
+        aria-label="submit"
+      >
         <Icon path={mdiSend} size={0.75} color={'currentColor'} rotate={-20} />
-        <span />
+        <span>Send</span>
       </button>
     </form>
   )

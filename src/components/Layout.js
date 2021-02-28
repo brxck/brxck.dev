@@ -44,16 +44,6 @@ const Layout = ({ children }) => {
 
         <nav className="absolute text-2xl italic font-black leading-snug tracking-wide text-indigo-500 underline dark:text-green-500 top-12 -right-52 w-44">
           <ul>
-            {Object.entries(social.siteMetadata).map(([name, link]) => (
-              <li key={name}>
-                <a href={link}>{name}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <nav className="absolute text-2xl italic font-black leading-snug tracking-wide text-indigo-100 underline top-64 -right-52 w-44 dark:text-green-100">
-          <ul>
             <li>
               <Link to="/#home">home</Link>
             </li>
@@ -66,6 +56,21 @@ const Layout = ({ children }) => {
             <li>
               <Link to="/#contact">contact</Link>
             </li>
+          </ul>
+        </nav>
+
+        <nav className="absolute text-2xl italic font-black leading-snug tracking-wide top-64 -right-52 w-44">
+          <ul>
+            {Object.entries(social.siteMetadata).map(([name, link]) => (
+              <li key={name}>
+                <a
+                  className="text-indigo-100 underline dark:text-green-100"
+                  href={link}
+                >
+                  {name}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </aside>
@@ -84,6 +89,8 @@ const Layout = ({ children }) => {
           </main>
         </div>
       </div>
+
+      <div className="mt-20"></div>
     </>
   )
 }

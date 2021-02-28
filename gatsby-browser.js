@@ -1,7 +1,4 @@
 import 'inter-ui/inter.css'
 import 'tailwindcss/tailwind.css'
-import './src/styles/base.css'
-import './src/styles/tailwind.css'
-import './src/styles/content.css'
-import './src/styles/typography.css'
+import './src/styles/styles.css'
 import './src/styles/prism.css'

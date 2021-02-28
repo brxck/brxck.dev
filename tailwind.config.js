@@ -3,9 +3,62 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
-      colors: {},
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            a: {
+              color: theme('colors.indigo.600'),
+              '&:hover': {
+                color: theme('colors.indigo.500'),
+              },
+            },
+            h1: {
+              color: theme('colors.indigo.600'),
+              fontStyle: 'italic',
+            },
+            h2: {
+              color: theme('colors.indigo.600'),
+              fontStyle: 'italic',
+            },
+            h3: {
+              color: theme('colors.indigo.600'),
+              fontStyle: 'italic',
+            },
+            h4: {
+              color: theme('colors.indigo.600'),
+              fontStyle: 'italic',
+            },
+          },
+        },
+
+        dark: {
+          css: {
+            color: theme('colors.gray.100'),
+            a: {
+              color: theme('colors.green.400'),
+              '&:hover': {
+                color: theme('colors.green.500'),
+              },
+            },
+            h1: {
+              color: theme('colors.green.400'),
+            },
+            h2: {
+              color: theme('colors.green.400'),
+            },
+            h3: {
+              color: theme('colors.green.400'),
+            },
+            h4: {
+              color: theme('colors.green.400'),
+            },
+          },
+        },
+      }),
     },
   },
-  variants: {},
-  plugins: [],
+  variants: {
+    typography: ['responsive', 'dark'],
+  },
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
 }

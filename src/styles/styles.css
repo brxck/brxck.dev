@@ -1,0 +1,76 @@
+@layer utilities {
+  .border-3 {
+    border-width: 3px;
+  }
+  .rounded-mega {
+    border-radius: 5rem;
+  }
+  .rotate-8 {
+    --tw-rotate: 8deg;
+  }
+  .-rotate-8 {
+    --tw-rotate: -8deg;
+  }
+  .rotate-0\.5 {
+    --tw-rotate: 0.5deg;
+  }
+  .-rotate-0\.5 {
+    --tw-rotate: -0.5deg;
+  }
+}
+
+@layer base {
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  html,
+  body,
+  #___gatsby,
+  #gatsby-focus-wrapper {
+    min-height: 100%;
+  }
+
+  html {
+    overflow-x: hidden;
+    @apply bg-indigo-100;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html {
+      @apply bg-gray-800;
+    }
+  }
+
+  #gatsby-focus-wrapper {
+    position: relative;
+  }
+
+  @font-face {
+    font-family: 'iA Writer Mono';
+    src: url('../fonts/iAWriterMonoS-Regular.woff2');
+  }
+
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+  @supports (font-variation-settings: normal) {
+    html {
+      font-family: 'Inter var', sans-serif;
+    }
+  }
+}
+
+@layer components {
+  .link {
+    @apply text-indigo-500 dark:text-green-500;
+    &:hover {
+      @apply underline;
+    }
+  }
+}

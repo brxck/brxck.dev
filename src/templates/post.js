@@ -16,9 +16,11 @@ const PostTemplate = ({ data }) => {
           },
         ]}
       />
-      <article>
+      <article className="prose dark:prose-dark">
         <h1>{post.frontmatter.title}</h1>
-        <h2>{post.frontmatter.date}</h2>
+        <div className="-mt-6 text-green-300">
+          {post.frontmatter.date} &mdash; Brock McElroy
+        </div>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </article>
     </Layout>

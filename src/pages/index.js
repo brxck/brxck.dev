@@ -81,7 +81,10 @@ export const query = graphql`
   {
     posts: allMarkdownRemark(
       limit: 3
-      filter: { fileAbsolutePath: { regex: "/posts/" } }
+      filter: {
+        fileAbsolutePath: { regex: "/posts/" }
+        frontmatter: { draft: { ne: true } }
+      }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       nodes {

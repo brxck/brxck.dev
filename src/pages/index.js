@@ -62,11 +62,13 @@ const IndexPage = ({ data }) => {
           <a href="https://github.com/brxck">Github.</a>
         </p>
         <div
-          className="relative flex flex-wrap items-stretch justify-center gap-4 mt-5 -left-1/3"
+          className="relative flex flex-wrap justify-center gap-4 mt-5 -left-1/3"
           style={{ width: '166%' }}
         >
           {projects.nodes.map((project) => (
-            <Project key={project.frontmatter.title} project={project} />
+            <div key={project.frontmatter.title} style={{ maxWidth: '32%' }}>
+              <Project project={project} />
+            </div>
           ))}
         </div>
 

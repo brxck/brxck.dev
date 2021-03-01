@@ -1,13 +1,10 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import Icon from '@mdi/react'
-import { mdiGithubCircle } from '@mdi/js'
 
 const Project = ({ project }) => {
   const { title, repo, tags, link, preview } = project.frontmatter
   return (
     <article className="relative flex flex-col justify-between h-full px-5 text-sm bg-white border rounded-2xl dark:bg-gray-900 dark:border-gray-700">
-      <div className="absolute z-10 w-full h-full -m-1 -ml-6 -mr-5 border-2 border-indigo-300 pointer-events-none dark:border-green-500 rounded-2xl"></div>
       <div>
         <Img
           className="-mx-5 rounded-b-none rounded-2xl"
@@ -25,8 +22,25 @@ const Project = ({ project }) => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={` repository`}
+              title="Repository"
             >
-              <Icon path={mdiGithubCircle} size={1} color="hsl(0, 0%, 29%)" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="feather feather-git-pull-request"
+              >
+                <circle cx="18" cy="18" r="3"></circle>
+                <circle cx="6" cy="6" r="3"></circle>
+                <path d="M13 6h3a2 2 0 0 1 2 2v7"></path>
+                <line x1="6" y1="9" x2="6" y2="21"></line>
+              </svg>
             </a>
           )}
         </div>
@@ -34,10 +48,10 @@ const Project = ({ project }) => {
           <p dangerouslySetInnerHTML={{ __html: project.html }}></p>
         </div>
       </div>
-      <ul className="flex pb-5">
+      <ul className="flex gap-1 pb-5">
         {tags.map((tech, index) => (
           <li
-            className="px-1 py-0.5 mr-1 text-xs text-indigo-600 border border-indigo-600 rounded-md dark:text-green-500 dark:border-green-600"
+            className="px-1 py-0.5 text-xs text-indigo-600 border border-indigo-600 rounded-md dark:text-green-500 dark:border-green-600"
             key={index}
           >
             {tech}

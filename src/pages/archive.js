@@ -8,11 +8,11 @@ const Archive = ({ data }) => {
   return (
     <Layout>
       <header>
-        <h1 className="mb-5 heading">writings archive</h1>
+        <h1 className="mb-5 heading">archive</h1>
       </header>
-      <main className="flex flex-wrap gap-4 -ml-36" style={{ width: '130%' }}>
+      <main className="flex flex-wrap gap-4 lg:-ml-36 lg:w-4/3">
         {posts.map(({ node }) => (
-          <div key={node.id} className="flex flex-grow w-1/4">
+          <div key={node.id} className="flex flex-grow lg:w-1/4">
             <PostPreview post={node} />
           </div>
         ))}

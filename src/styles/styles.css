@@ -1,27 +1,49 @@
 @layer utilities {
-  .border-3 {
-    border-width: 3px;
+  @variants responsive {
+    .border-3 {
+      border-width: 3px;
+    }
+    .border-t-3 {
+      border-top-width: 3px;
+    }
+    .border-b-3 {
+      border-bottom-width: 3px;
+    }
+    .rounded-mega {
+      border-radius: 5rem;
+    }
+    .rotate-8 {
+      --tw-rotate: 8deg;
+    }
+    .-rotate-8 {
+      --tw-rotate: -8deg;
+    }
+    .rotate-0\.5 {
+      --tw-rotate: 0.5deg;
+    }
+    .-rotate-0\.5 {
+      --tw-rotate: -0.5deg;
+    }
+    .max-w-1\/2 {
+      max-width: 50%;
+    }
+    .max-w-1\/3 {
+      max-width: calc(100% / 3);
+    }
+    .w-5\/3 {
+      width: 166%;
+    }
+    .w-4\/3 {
+      width: 133%;
+    }
   }
-  .rounded-mega {
-    border-radius: 5rem;
+  .flex-collapse {
+    @apply flex-col;
   }
-  .rotate-8 {
-    --tw-rotate: 8deg;
-  }
-  .-rotate-8 {
-    --tw-rotate: -8deg;
-  }
-  .rotate-0\.5 {
-    --tw-rotate: 0.5deg;
-  }
-  .-rotate-0\.5 {
-    --tw-rotate: -0.5deg;
-  }
-  .max-w-1\/2 {
-    max-width: 50%;
-  }
-  .max-w-1\/3 {
-    max-width: calc(100% / 3);
+  @screen sm {
+    .flex-collapse-sm {
+      @apply flex-row;
+    }
   }
 }
 
@@ -60,6 +82,15 @@
   @font-face {
     font-family: 'iA Writer Mono';
     src: url('../fonts/iAWriterMonoS-Regular.woff2');
+  }
+
+  html {
+    font-size: 90%;
+  }
+  @screen sm {
+    html {
+      font-size: 100%;
+    }
   }
 
   html {

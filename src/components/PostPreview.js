@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 const PostPreview = ({ post }) => {
   return (
     <article className="relative text-sm bg-white border rounded-2xl dark:bg-gray-900 dark:border-gray-700">
-      <div className="absolute w-full h-full -m-1 border-2 border-indigo-300 pointer-events-none dark:border-green-500 rounded-2xl"></div>
       <div className="flex flex-col justify-between h-full p-5">
         <div className="prose-sm">
           <h3>

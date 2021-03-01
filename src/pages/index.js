@@ -10,21 +10,23 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <header>
-        <h1 className="mb-3 text-4xl italic font-black tracking-wide text-indigo-500 dark:text-green-500">
+        <h1 className="mb-3 text-3xl italic font-black tracking-wide text-indigo-500 dark:text-green-500">
           Hi, I'm Brock.
         </h1>
         <div className="prose dark:prose-dark">
           <p>
-            I'm a full stack developer creating applications that make the
-            University of Arizona a better place to learn and work.
+            I'm a full stack web developer. Currently, I'm at the creating
+            applications that make the University of Arizona a better place to
+            learn and work.
           </p>
           <p>
-            A a arcu taciti diam vitae suspendisse hendrerit ut sit sociis ut
-            nunc elementum integer mi blandit hendrerit lorem.Vulputate vitae
-            suspendisse a cubilia massa suscipit molestie himenaeos nascetur
-            integer ac posuere per porta a dignissim consequat parturient
-            tincidunt hac nam.Eget convallis a nibh fames dui fringilla
-            consectetur magnis a.
+            I enjoy doing deep dives for the best solutions, whether I am
+            orchestrating containers in AWS, writing an API in Django, or
+            building an application in React.
+          </p>
+          <p>
+            In the past, I have been a teaching assistant for the University of
+            Arizona's web development bootcamp and a freelance web developer.
           </p>
           <p>
             When I'm not coding, I prefer to be in a hammock or planning a
@@ -44,10 +46,7 @@ const IndexPage = ({ data }) => {
             more →
           </Link>
         </div>
-        <div
-          className="relative flex gap-4 -left-1/3"
-          style={{ width: '166%' }}
-        >
+        <div className="relative flex flex-col gap-4 lg:flex-row lg:-left-1/3 lg:w-5/3">
           {posts.nodes.map((post) => (
             <PostPreview key={post.fields.slug} post={post} />
           ))}
@@ -61,12 +60,9 @@ const IndexPage = ({ data }) => {
           code and contributions over at my{' '}
           <a href="https://github.com/brxck">Github.</a>
         </p>
-        <div
-          className="relative flex flex-wrap justify-center gap-4 mt-5 -left-1/3"
-          style={{ width: '166%' }}
-        >
+        <div className="relative flex flex-col justify-center gap-4 mt-5 lg:flex-row lg:-left-1/3 lg:w-5/3">
           {projects.nodes.map((project) => (
-            <div key={project.frontmatter.title} style={{ maxWidth: '32%' }}>
+            <div key={project.frontmatter.title} className="lg:w-1/3">
               <Project project={project} />
             </div>
           ))}
@@ -110,6 +106,7 @@ export const query = graphql`
         html
         frontmatter {
           title
+          link
           repo
           date(formatString: "DD MMMM, YYYY")
           tags

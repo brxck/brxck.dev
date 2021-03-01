@@ -3,7 +3,6 @@
   "author": "Brock McElroy <brxck@protonmail.com>",
   "private": true,
   "dependencies": {
-    "@mdi/js": "^2.8.94",
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.4.0",
     "gatsby": "^2.32.3",
@@ -37,9 +36,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@mdi/react": "^1.4.0",
     "eslint": "^7.20.0",
     "eslint-config-gatsby-standard": "^2.2.0",
+    "flex-gap-polyfill": "^2.2.1",
     "postcss-nesting": "^7.0.1",
     "prettier": "^2.2.1",
     "tailwindcss": "^2.0.3"

@@ -52,6 +52,10 @@ module.exports = {
             h4: {
               color: theme('colors.green.400'),
             },
+            blockquote: {
+              color: theme('colors.gray.100'),
+              borderLeftColor: theme('colors.green.400'),
+            },
           },
         },
       }),

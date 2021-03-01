@@ -95,7 +95,7 @@ const Contact = () => {
         />
       </div>
       <button
-        className="flex items-center justify-center w-full py-2 mt-3 text-white bg-indigo-600 rounded-xl dark:bg-green-500"
+        className="flex items-center justify-center w-full py-2 mt-3 text-white bg-indigo-600 rounded-xl dark:bg-green-500 hover:bg-indigo-700 dark:hover:bg-green-600"
         type="submit"
         disabled={!!state.sent}
         aria-label="submit"

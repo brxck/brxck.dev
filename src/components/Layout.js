@@ -32,12 +32,6 @@ const Layout = ({ children }) => {
         <html lang="en" />
       </Helmet>
 
-      <div className="fixed flex items-center justify-center w-full h-32">
-        <div className="flex justify-end w-full max-w-xl px-2">
-          <DarkToggle />
-        </div>
-      </div>
-
       <div className="absolute bottom-0 w-full max-w-3xl -mt-1 transform -translate-x-1/2 top-32 left-1/2">
         {/* Background shapes! */}
         <div
@@ -94,6 +88,10 @@ const Layout = ({ children }) => {
             <div>McElroy</div>
           </Link>
         </h1>
+
+        <div className="absolute z-10 transform translate-x-48 right-1/2 top-10">
+          <DarkToggle />
+        </div>
 
         <div className="h-full max-w-3xl" style={{ minHeight: '74vh' }}>
           <main className="relative p-8 text-gray-900 md:p-16 md:pt-12 sm:left-2 dark:text-gray-50">

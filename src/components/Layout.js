@@ -93,8 +93,6 @@ const Layout = ({ children }) => {
           </main>
         </div>
       </div>
-
-      <div className="mt-20"></div>
     </>
   )
 }

@@ -50,6 +50,7 @@
 @layer base {
   html {
     box-sizing: border-box;
+    position: relative;
   }
   *,
   *:before,
@@ -73,10 +74,6 @@
     html {
       @apply bg-gray-800;
     }
-  }
-
-  #gatsby-focus-wrapper {
-    position: relative;
   }
 
   @font-face {

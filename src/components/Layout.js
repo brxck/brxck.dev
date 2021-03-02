@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 
+import DarkToggle from './DarkToggle'
+
 const Layout = ({ children }) => {
   const { site, social } = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -29,6 +31,12 @@ const Layout = ({ children }) => {
         <meta name="description" content={site.siteMetadata.description} />
         <html lang="en" />
       </Helmet>
+
+      <div className="fixed flex items-center justify-center w-full h-32">
+        <div className="flex justify-end w-full max-w-xl px-2">
+          <DarkToggle />
+        </div>
+      </div>
 
       <div className="absolute bottom-0 w-full max-w-3xl -mt-1 transform -translate-x-1/2 top-32 left-1/2">
         {/* Background shapes! */}

@@ -67,5 +67,7 @@ module.exports = {
       },
     },
   ],
-  flags: {},
+  flags: {
+    DEV_SSR: false,
+  },
 }

@@ -22,7 +22,6 @@ const PostPreview = ({ post }) => {
         </ul>
       </div>
       <p>{post.excerpt}</p>
-      <div className="py-1 text-xs">{post.frontmatter.date}</div>
     </article>
   )
 }

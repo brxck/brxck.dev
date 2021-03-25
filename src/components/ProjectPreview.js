@@ -54,7 +54,7 @@ const ProjectPreview = ({ project }) => {
           ))}
         </ul>
       </div>
-      <p dangerouslySetInnerHTML={{ __html: project.html }}></p>
+      <div dangerouslySetInnerHTML={{ __html: project.html }}></div>
       <p></p>
     </article>
   )

@@ -7,7 +7,7 @@ const ProjectCard = ({ project }) => {
     <article className="relative flex flex-col justify-between h-full px-5 text-sm bg-white border border-indigo-400 rounded-2xl dark:bg-gray-900 dark:border-green-400">
       <div>
         <Img
-          className="-mx-5 rounded-b-none rounded-2xl"
+          className="-mx-5 border-b rounded-b-none rounded-2xl"
           fluid={preview.childImageSharp.fluid}
         ></Img>
         <div className="flex items-center justify-between pt-5">
@@ -45,7 +45,7 @@ const ProjectCard = ({ project }) => {
           )}
         </div>
         <div className="prose-sm dark:prose-dark-sm">
-          <p dangerouslySetInnerHTML={{ __html: project.html }}></p>
+          <div dangerouslySetInnerHTML={{ __html: project.html }}></div>
         </div>
       </div>
       <ul className="flex gap-1 pb-5">

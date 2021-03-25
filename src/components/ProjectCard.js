@@ -1,10 +1,10 @@
 import React from 'react'
 import Img from 'gatsby-image'
 
-const Project = ({ project }) => {
+const ProjectCard = ({ project }) => {
   const { title, repo, tags, link, preview } = project.frontmatter
   return (
-    <article className="relative flex flex-col justify-between h-full px-5 text-sm bg-white border rounded-2xl dark:bg-gray-900 dark:border-gray-700">
+    <article className="relative flex flex-col justify-between h-full px-5 text-sm bg-white border border-indigo-400 rounded-2xl dark:bg-gray-900 dark:border-green-400">
       <div>
         <Img
           className="-mx-5 rounded-b-none rounded-2xl"
@@ -62,4 +62,4 @@ const Project = ({ project }) => {
   )
 }
 
-export default Project
+export default ProjectCard

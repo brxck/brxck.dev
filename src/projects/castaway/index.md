@@ -1,7 +1,7 @@
 ---
-name: Castaway
+title: Castaway
 repo: https://github.com/brxck/castaway
-link: http://castaway.by.brxck.dev/
+link: https://castaway.by.brxck.dev/
 tags: [Ruby, Rails, JavaScript]
 date: 2018-08-20
 preview: preview.png

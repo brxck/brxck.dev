@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
         <html lang="en" />
       </Helmet>
 
-      <div className="absolute bottom-0 w-full max-w-3xl -mt-1 transform -translate-x-1/2 top-32 left-1/2">
+      <div className="absolute bottom-0 w-full max-w-3xl mb-10 -mt-1 transform -translate-x-1/2 top-32 left-1/2">
         {/* Background shapes! */}
         <div
           className="absolute hidden w-full origin-top-left transform translate-y-24 bg-indigo-700 lg:block dark:bg-green-700 h-2/3 -right-64 rounded-mega rotate-12"
@@ -78,7 +78,7 @@ const Layout = ({ children }) => {
         </aside>
       </div>
 
-      <div className="flex flex-col h-full sm:items-center">
+      <div className="flex flex-col h-full mb-10 sm:items-center">
         <h1 className="z-10 mt-5 text-6xl italic font-black tracking-wider text-center">
           <Link
             className="text-indigo-500 shadow-xl hover:no-underline dark:text-green-500"

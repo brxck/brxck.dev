@@ -18,9 +18,9 @@ export default function DarkToggle() {
   return (
     <button
       onClick={toggle}
-      className="p-3 text-indigo-600 dark:text-green-500"
-      aria-label="Toggle dark/light theme"
-      title="Toggle dark/light theme"
+      className="p-3 text-indigo-500 dark:text-green-500"
+      aria-label={`Switch to ${dark ? 'light' : 'dark'} mode`}
+      title={`Switch to ${dark ? 'light' : 'dark'} mode`}
     >
       {dark && (
         <svg

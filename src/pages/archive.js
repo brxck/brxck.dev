@@ -10,11 +10,9 @@ const Archive = ({ data }) => {
       <header>
         <h1 className="mb-5 heading">archive</h1>
       </header>
-      <main className="flex flex-wrap gap-4 lg:-ml-36 lg:w-4/3">
+      <main>
         {posts.map(({ node }) => (
-          <div key={node.id} className="flex flex-grow lg:w-1/4">
-            <PostPreview post={node} />
-          </div>
+          <PostPreview post={node} key={node.id} />
         ))}
       </main>
     </Layout>

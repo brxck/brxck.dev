@@ -2,7 +2,7 @@
 title: gatsby-starter-stripe
 repo: https://github.com/brxck/gatsby-starter-stripe
 link: https://github.com/brxck/gatsby-starter-stripe
-tags: [React, Gatsby, Serverless]
+tags: [React, Gatsby, Netlify Functions]
 date: 2019-04-14
 preview: preview.png
 ---

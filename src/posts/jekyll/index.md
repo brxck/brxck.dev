@@ -1,7 +1,7 @@
 ---
 title: Moving from Jekyll to Gatsby
 date: 2018-10-08
-tags: [Gatsby, React, GraphQL, Jekyll, Web]
+tags: [Gatsby, React, Web]
 ---
 
 I've migrated my site from [Jekyll](https://jekyllrb.com/) to [GatsbyJS](https://www.gatsbyjs.org/), the static site generator built on React, webpack, and GraphQL. I got to work with some new, buzzy techs and I ended up with a cooler, snappier site at the end of it!

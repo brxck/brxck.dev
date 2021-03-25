@@ -1,7 +1,7 @@
 ---
 title: 'Host-only Networking in KVM'
 date: 2018-07-05
-tags: [KVM, Linux, Voice-Coding]
+tags: [Linux, Voice-Coding]
 ---
 
 KVM is a part of the Linux kernel that allows it to act as a hypervisor, which sounds cool enough to make you feel silly for installing VirtualBox in the first place. But, VirtualBox does come with a useful host-only network adapter and it's not immediately obvious how to duplicate it in KVM.

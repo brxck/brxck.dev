@@ -1,7 +1,7 @@
 ---
 title: Using Storybook with Vue
 date: 2021-02-18
-tags: [Vue, JavaScript]
+tags: [Vue, JavaScript, Web]
 draft: false
 ---
 

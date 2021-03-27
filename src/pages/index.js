@@ -106,7 +106,6 @@ export const query = graphql`
         }
       }
     }
-
     projects: allMarkdownRemark(
       limit: 6
       filter: { fileAbsolutePath: { regex: "/projects/" } }
@@ -123,9 +122,12 @@ export const query = graphql`
           tags
           preview {
             childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
-              }
+              gatsbyImageData(
+                placeholder: TRACED_SVG
+                layout: CONSTRAINED
+                width: 640
+                tracedSVGOptions: { color: "#6366f1" }
+              )
             }
           }
         }

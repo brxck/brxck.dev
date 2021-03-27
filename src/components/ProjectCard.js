@@ -1,15 +1,16 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const ProjectCard = ({ project }) => {
   const { title, repo, tags, link, preview } = project.frontmatter
   return (
     <article className="relative flex flex-col justify-between h-full px-5 text-sm bg-white border border-indigo-400 rounded-2xl dark:bg-gray-900 dark:border-green-400">
       <div>
-        <Img
+        <GatsbyImage
+          image={preview.childImageSharp.gatsbyImageData}
           className="-mx-5 border-b rounded-b-none rounded-2xl"
-          fluid={preview.childImageSharp.fluid}
-        ></Img>
+          alt={title}
+        />
         <div className="flex items-center justify-between pt-5">
           <h3 className="text-lg">
             <a href={link || ''} target="_blank" rel="noopener noreferrer">

@@ -19,6 +19,12 @@ const PostTemplate = ({ data }) => {
       <article className="prose dark:prose-dark">
         <h1>{post.frontmatter.title}</h1>
         <div className="-mt-6">{post.frontmatter.date}</div>
+        {post.frontmatter.toc && (
+          <div
+            className="toc"
+            dangerouslySetInnerHTML={{ __html: post.tableOfContents }}
+          />
+        )}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </article>
     </Layout>
@@ -26,14 +32,16 @@ const PostTemplate = ({ data }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt
+      tableOfContents
       frontmatter {
         title
         date(formatString: "DD MMMM, YYYY")
         tags
+        toc
       }
     }
   }

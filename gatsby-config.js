@@ -62,8 +62,15 @@ module.exports = {
               withWebp: true,
             },
           },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              aliases: { sh: 'bash' },
+              showLineNumbers: true,
+            },
+          },
           `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-prismjs`,
+          `gatsby-remark-autolink-headers`,
         ],
       },
     },

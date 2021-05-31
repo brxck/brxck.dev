@@ -28,6 +28,12 @@ module.exports = {
               color: theme('colors.indigo.600'),
               fontStyle: 'italic',
             },
+            blockquote: {
+              fontWeight: '400',
+              borderLeftColor: theme('colors.indigo.300'),
+            },
+            'code::before': { content: 'unset' },
+            'code::after': { content: 'unset' },
           },
         },
 

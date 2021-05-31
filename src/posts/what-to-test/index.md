@@ -1,15 +1,18 @@
 ---
 title: What To Unit Test
-date: 2021-05-20
+date: 2021-05-30
 tags: [Testing]
-draft: true
 ---
 
 It's worth watching [this talk by Sandi Metz](https://www.youtube.com/watch?v=URSWYvyc42M). It was given at a Ruby conference, but the concepts are language independent. Really, watch it; it will be more effective than just trying to read the below.
 
-![testing grid](/assets/testing_grid.png)
+|                  | Query                 | Commmand              |
+| ---------------- | --------------------- | --------------------- |
+| **Incoming**     | _Assert Return Value_ | _Assert Side Effect_  |
+| **Self to Self** | Don't Test            | Don't Test            |
+| **Outgoing**     | Don't Test            | _Assert Message Sent_ |
 
-## In Summary
+## To Summarize
 
 It is important to be selective with what we test! A set of unit tests should a single, contained object, and nothing else. If our tests are too broad, then we begin testing _other objects_ or _implementation details_, and our tests become fragile and interdependent.
 
@@ -21,18 +24,24 @@ We should only test the messages sent to and from the object. We do not want to 
 
 We are testing two types of messages:
 
-- _Queries:_ Return a value
-- _Commands:_ Effect/change something
+- **Query:** Returns a value
+- **Command:** Effects/changes something
 - It is possible to be both, e.g. `Array.pop()` returns a value _and_ removes it from the array.
 
 It matters where these messages come from in relation to the object:
 
-- _Incoming:_ Directed at the object from the external world
-- _Outgoing:_ Originating from the object
+- **Incoming:** Directed at the object from the external world
+- **Outgoing:** Originating from the object
 
 #### Which Messages To Test
 
-_See the chart above!_
+Again, the chart:
+
+|                  | Query                 | Commmand              |
+| ---------------- | --------------------- | --------------------- |
+| **Incoming**     | _Assert Return Value_ | _Assert Side Effect_  |
+| **Self to Self** | Don't Test            | Don't Test            |
+| **Outgoing**     | Don't Test            | _Assert Message Sent_ |
 
 Notice how one object's _incoming message_ must be another object's _outgoing message_. This has some implications for which messages we should test.
 

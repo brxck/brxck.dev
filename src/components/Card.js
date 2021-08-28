@@ -1,18 +1,29 @@
 import React from 'react'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
-const ProjectPreview = ({ project }) => {
-  const { repo, tags } = project.frontmatter
+import Tags from './Tags'
+
+const Card = ({ image, title, children, link, repo, tags, className }) => {
   return (
-    <article key={project.id} className="py-2">
-      <div className="flex justify-between">
-        <div className="flex gap-1">
-          <h3 className="mb-1 text-lg">
+    <article
+      className={`relative flex flex-col justify-between flex-1 px-5 text-sm bg-white border-2 border-indigo-400 rounded-2xl dark:bg-gray-900 dark:border-green-400 ${className}`}
+    >
+      <div>
+        {image && (
+          <GatsbyImage
+            image={image.childImageSharp.gatsbyImageData}
+            className="mb-5 -mx-5 border-b rounded-b-none rounded-2xl"
+            alt={title}
+          />
+        )}
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="text-lg">
             <a
-              href={project.frontmatter.link || ''}
-              target="_blank"
+              href={link}
+              target={link.includes('://') && '_blank'}
               rel="noopener noreferrer"
             >
-              {project.frontmatter.title}
+              {title}
             </a>
           </h3>
           {repo && (
@@ -20,7 +31,7 @@ const ProjectPreview = ({ project }) => {
               href={repo}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={` repository`}
+              aria-label="Source repository"
               title="Repository"
             >
               <svg
@@ -43,20 +54,11 @@ const ProjectPreview = ({ project }) => {
             </a>
           )}
         </div>
-        <ul className="hidden gap-1 pb-5 sm:flex">
-          {tags.map((tech, index) => (
-            <li
-              className="px-1 py-0.5 text-xs text-indigo-600 border border-indigo-600 rounded-md dark:text-green-500 dark:border-green-600"
-              key={index}
-            >
-              {tech}
-            </li>
-          ))}
-        </ul>
+        <div className="mb-3 prose-sm dark:prose-dark-sm">{children}</div>
       </div>
-      <div dangerouslySetInnerHTML={{ __html: project.html }}></div>
+      <Tags tags={tags}></Tags>
     </article>
   )
 }
 
-export default ProjectPreview
+export default Card

@@ -45,16 +45,16 @@ const Layout = ({ children }) => {
         </div>
 
         <aside className="hidden lg:block">
-          <nav className="absolute text-2xl italic font-black leading-snug tracking-wide text-indigo-500 underline dark:text-green-500 top-12 -right-52 w-44">
+          <nav className="absolute text-2xl italic font-black leading-snug tracking-wide text-indigo-500 underline dark:text-green-500 top-10 -right-52 w-44">
             <ul>
               <li>
                 <Link to="/">home</Link>
               </li>
               <li>
-                <Link to="/#writing">writing</Link>
+                <Link to="/#work">work</Link>
               </li>
               <li>
-                <Link to="/#work">work</Link>
+                <Link to="/#writing">writing</Link>
               </li>
               <li>
                 <Link to="/#contact">contact</Link>
@@ -73,6 +73,14 @@ const Layout = ({ children }) => {
                   </a>
                 </li>
               ))}
+              {/* <li>
+                <Link
+                  className="text-indigo-100 underline dark:text-green-100"
+                  to="/artwork"
+                >
+                  artwork
+                </Link>
+              </li> */}
             </ul>
           </nav>
         </aside>

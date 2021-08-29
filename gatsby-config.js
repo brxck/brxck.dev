@@ -44,13 +44,13 @@ module.exports = {
         path: `${__dirname}/src/projects`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `arts`,
-        path: `${__dirname}/src/arts`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `arts`,
+    //     path: `${__dirname}/src/arts`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

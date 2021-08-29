@@ -52,7 +52,10 @@ const Contact = () => {
       </div>
       <div className="flex gap-2 mb-3">
         <div>
-          <label className="ml-1 font-medium text-indigo-700" htmlFor="email">
+          <label
+            className="ml-1 font-medium text-indigo-700 dark:text-green-500"
+            htmlFor="email"
+          >
             Your Email
           </label>
           <input
@@ -67,7 +70,10 @@ const Contact = () => {
           />
         </div>
         <div>
-          <label className="ml-1 font-medium text-indigo-700" htmlFor="subject">
+          <label
+            className="ml-1 font-medium text-indigo-700 dark:text-green-500"
+            htmlFor="subject"
+          >
             Subject
           </label>
           <input
@@ -83,7 +89,10 @@ const Contact = () => {
         </div>
       </div>
       <div>
-        <label className="ml-1 font-medium text-indigo-700" htmlFor="message">
+        <label
+          className="ml-1 font-medium text-indigo-700 dark:text-green-500"
+          htmlFor="message"
+        >
           Message
         </label>
         <textarea

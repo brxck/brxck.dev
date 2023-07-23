@@ -7,4 +7,4 @@ date: 2017-01-01
 image: null
 ---
 
-Procedurally animated reptiles using paper.js. _Warning: may provoke cat attacks._
+Procedurally animated reptiles using paper.js.

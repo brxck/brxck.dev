@@ -17,7 +17,6 @@ const Layout = ({ children }) => {
       social: site {
         siteMetadata {
           github
-          twitter
           instagram
           linkedin
         }
@@ -55,9 +54,6 @@ const Layout = ({ children }) => {
               </li>
               <li>
                 <Link to="/#writing">writing</Link>
-              </li>
-              <li>
-                <Link to="/#contact">contact</Link>
               </li>
             </ul>
           </nav>

@@ -5,7 +5,6 @@ module.exports = {
     description: `Brock McElroy is a full stack web developer finding robust, accessible solutions.`,
     github: `https://github.com/brxck`,
     instagram: `https://instagram.com/br__ck`,
-    twitter: `https://twitter.com/3rxck`,
     linkedin: `https://linkedin.com/in/brockmcelroy`,
   },
   plugins: [
